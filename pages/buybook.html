@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>buybooks</title>
+  </head>
+  <style>
+    .logo {
+      height: 100px;
+      /* margin-top: 10px; */
+      margin-left: 30px;
+      /* align-items: center; */
+    }
+
+    .head {
+      background-color: white;
+      width: 100%;
+    }
+    .img-1 {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+    }
+    .sign {
+      height: 50px;
+      width: 130px;
+      font-size: 20px;
+      cursor: pointer;
+      /* margin-left:65%; */
+      border-radius: 20px;
+      /* margin-bottom:-500px; */
+      background-color: white;
+      color: #194569;
+      font-style: oblique;
+      /* margin-bottom:000px; */
+      border: none;
+    }
+    .sign:hover {
+      background-color: #194569;
+      color: white;
+    }
+    .head-logo {
+      display: inline-block;
+    }
+    .head-btn {
+      vertical-align: top;
+      display: inline-block;
+      padding-top: 30px;
+      margin-left: 950px;
+    }
+    .btn-1 {
+      height: 50px;
+      width: 130px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-left: 10px;
+      border-radius: 20px;
+      /* margin-bottom:-500px; */
+      background-color: white;
+      color: #194569;
+      font-style: oblique;
+      border: none;
+    }
+    .btn-1:hover {
+      background-color: #194569;
+      color: white;
+    }
+    .btn-2 {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      margin-left: 20px;
+    }
+    .btn-3 {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      margin-left: 20px;
+    }
+    .img-2 {
+      height: 40px;
+      width: 40px;
+    }
+
+    .img-3 {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+    }
+    .btn-5 {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      margin-left: 20px;
+    }
+    .img-4 {
+      height: 40px;
+      width: 40px;
+      border-radius: 20px;
+    }
+    .head {
+      display: inline-block;
+    }
+    .box-1 {
+      background-color: #194569;
+      gap: 500px;
+      height: 310px;
+      width: 690px;
+      border-radius: 20px;
+      display: flex;
+    }
+    body {
+      background-color: #587b97;
+    }
+    .tre {
+      font-size: 60px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: white;
+    }
+    .tb-1 {
+      height: 190px;
+      margin-left: 50px;
+      margin-top: 55px;
+    }
+    .tbtn-1 {
+      height: 50px;
+      width: 150px;
+      background-color: #b4cadc;
+      color: #194569;
+      border: none;
+      border-radius: 15px;
+      margin-left: 50px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .tbtn-1:hover {
+      background-color: white;
+      color: #194569;
+      transform: scale(1.3);
+    }
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
+      /* border: #e2dce8; */
+    }
+    .c-1 {
+      display: flex;
+      gap: 50px;
+      margin-left: 65px;
+    }
+    .title input[type="text"] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+    .title {
+      display: flex;
+    }
+    .search {
+      padding: 6px 10px;
+      display: inline-block;
+      background: #587b97;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 55px;
+      margin-right: 30px;
+    }
+    .sbar {
+      background: #194569;
+      height: 30px;
+      width: 300px;
+      /* margin-top: 20px; */
+      margin-left: 70px;
+    }
+    .bpara {
+      color: #97b5ce;
+      font-size: 20px;
+      margin-top: 70px;
+    }
+    .pb {
+      margin-left: -450px;
+    }
+    .vline {
+      border-left: 3px solid white;
+      margin-left: -480px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .set-1 {
+      display: flex;
+      gap: 150px;
+    }
+    .set-2 {
+      display: flex;
+      gap: 150px;
+      margin-top: 100px;
+    }
+    .set-3 {
+      display: flex;
+      gap: 150px;
+      margin-top: 100px;
+    }
+    .set-4 {
+      display: flex;
+      gap: 150px;
+      margin-top: 100px;
+    }
+    .set-5 {
+      display: flex;
+      gap: 150px;
+      margin-top: 100px;
+    }
+  </style>
+  <body>
+    <div class="head">
+      <div class="head-logo">
+        <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
+      </div>
+      <div class="head-btn">
+        <a href="./../pages/sign.html"><button class="sign">SIGN-UP</button></a>
+        <button class="btn-1">MY BOOKS</button>
+        <button class="btn-2">
+          <img
+            class="img-1"
+            src="./../assets/images/music-note.png"
+            alt="music"
+          />
+        </button>
+        <button class="btn-3">
+          <img
+            class="img-2"
+            src="./../assets/images/lightbulb-on-10.png"
+            alt="lightbulb"
+          />
+        </button>
+
+        <button class="btn-5">
+          <img
+            class="img-4"
+            src="./../assets/images/account-cog-outline.png"
+            alt="profile"
+          />
+        </button>
+      </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------------------- -->
+    <div class="title">
+      <h1 class="tre">BUY BOOKS</h1>
+      <form action="/action_page.php">
+        <input class="sbar" type="text" placeholder="Search.." name="search" />
+        <button class="search" type="submit">
+          <img src="./../assets/images/magnify.png" />
+        </button>
+      </form>
+    </div>
+    <!-- 111111111111 -->
+    <div class="set-1">
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- -------------- -->
+
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 11111 -->
+    <div class="set-2">
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 11111111111111 -->
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 111111111111 -->
+    <div class="set-3">
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 111111111 -->
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="set-4">
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 111111111 -->
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="set-5">
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 111111111 -->
+      <div class="c-1">
+        <div class="tbook-1">
+          <div class="box-1">
+            <div>
+              <img
+                class="tb-1"
+                src="./../assets/images/sbook-1.png"
+                alt="tbok"
+              />
+            </div>
+            <div class="vline"></div>
+            <div class="pb">
+              <p class="bpara">
+                A science book is a work of nonfiction,<br />
+                usually written by a scientist, researcher<br />, or professor
+                like Stephen Hawking (A Brief <br />History of Time), or
+                sometimes by a<br />
+                non-scientist such as Bill Bryson <br />(A Short History of
+                Nearly Everything).
+              </p>
+              <a href="./buynow.html"
+                ><button class="tbtn-1"><b>Buy now</b></button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
