@@ -11,7 +11,7 @@
       background-color: #d5e3ed;
     }
     .all {
-      background-color: #a2c2d8;
+      background-color: #7491a4;
       height: 700px;
       width: 1400px;
       margin-left: 230px;
@@ -33,7 +33,7 @@
     }
     p {
       font-size: 20px;
-      color: #343b3e;
+      color: white;
       margin-left: 150px;
       margin-top: -310px;
     }
@@ -49,13 +49,27 @@
       border-radius: 30px;
     }
     .fb {
-      height: 30px;
+      height: 40px;
       width: 250px;
-      border-radius: 20px;
+      border-radius: 10px;
       border: none;
       display: flex;
+
       margin-left: 50px;
       background-color: #a2c2d8;
+      color: #0b0c0e;
+    }
+    .fb-1 {
+      height: 160px;
+      width: 250px;
+      border-radius: 10px;
+      border: none;
+      display: flex;
+
+      margin-left: 50px;
+      background-color: #a2c2d8;
+      color: #0b0c0e;
+      margin-left: 240px;
     }
     .fb {
       margin-left: 240px;
@@ -64,18 +78,22 @@
       margin-left: 100px;
       color: white;
       font-size: 30px;
-      margin-bottom: 80px;
+      margin-top: -100px;
     }
     .btn {
       background-color: #a2c2d8;
       color: black;
       font-size: 20px;
-      border-radius: 20px;
+      border-radius: 10px;
       border: none;
       height: 40px;
       width: 100px;
       margin-left: 200px;
       margin-top: 100px;
+    }
+    h1 {
+      color: white;
+      margin-left: 200px;
     }
   </style>
   <body>
@@ -90,21 +108,15 @@
 
         <!-- ...... -->
 
-        <h1 class="heading">Address</h1>
+        <h1 class="heading">Call us</h1>
         <img class="img-1" src="./../assets/images/phone.png" /><br />
-        <p>
-          chennai ht-2<br />
-          medavakkam
-        </p>
+        <p>09876543221</p>
 
         <!-- ....... -->
 
-        <h1 class="heading">Address</h1>
+        <h1 class="heading">Email us</h1>
         <img class="img-1" src="./../assets/images/email.png" /><br />
-        <p>
-          chennai ht-2<br />
-          medavakkam
-        </p>
+        <p>livre.durga@gmail.com</p>
       </div>
       <div class="s-2">
         <h1>SENT US A MESSAGE</h1>
@@ -119,13 +131,15 @@
           required
         /><br />
         <textarea
-          placeholder="my suggestions..."
+          placeholder="message..."
           name="msg"
           required
-          class="fb"
+          class="fb-1"
         ></textarea>
 
-        <button type="submit" class="btn">Cancel</button>
+        <a href="./../index.html"
+          ><button type="submit" class="btn">Cancel</button></a
+        >
         <button type="button" class="btn">submit</button>
       </div>
     </div>
