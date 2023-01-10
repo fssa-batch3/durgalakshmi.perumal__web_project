@@ -1,0 +1,170 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/CSS/style-request user.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>REQUEST FORM</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      body {
+        background-image: #f3f3f3;
+        background-size: cover;
+      }
+      .details {
+        margin-top: 45px;
+        margin-left: 500px;
+        margin-right: 600px;
+        background-color: #f5f5f5;
+        padding: 35px;
+        width: 500px;
+        height: 750px;
+        border-radius: 25px;
+        font-size: 20px;
+      }
+      .details h1 {
+        text-align: center;
+      }
+      .photo {
+        margin-left: 10px;
+        margin-top: 70px;
+        border: solid 1px black;
+        width: 120px;
+        height: 150px;
+        padding: 30px 35px;
+        text-align: center;
+      }
+      .address {
+        margin-left: 250px;
+        margin-top: -220px;
+      }
+      .address label {
+        font-size: 30px;
+      }
+      .address input {
+        padding: 15px;
+        font-size: 20px;
+        border: none;
+        box-sizing: 4px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .collection {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .collection h3 {
+        font-weight: bolder;
+        font-size: 25px;
+        margin-left: -25px;
+        color: #0b1320;
+      }
+      .dust-bin h3 {
+        font-weight: bolder;
+        font-size: 20px;
+        margin-left: -25px;
+        color: #0b1320;
+      }
+      .collection input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .dust-bin {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+      .dust-bin input {
+        margin-bottom: 10px;
+      }
+      button {
+        margin-top: 30px;
+        margin-left: 200px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 13px;
+        width: 120px;
+        border: none;
+        border-radius: 25px;
+        background-color: rgb(17, 119, 183);
+        color: white;
+      }
+      button:hover {
+        background-color: black;
+        opacity: 0.7;
+      }
+      button:active {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="details">
+      <h1>Fill the Details</h1>
+      <hr />
+      <form>
+        <div class="photo">
+          <div><i class="fa fa-add"></i></div>
+          <p>Upload photo</p>
+        </div>
+        <div class="address">
+          <label>email</label><br />
+          <input type="text" placeholder="Enter your email" id="email" /><br />
+          <label>email:</label><br />
+          <input
+            type="tel"
+            placeholder="Enter your email"
+            maxlength="10"
+            id="email"
+          /><br />
+          <label>Address</label><br />
+          <input
+            type="text"
+            placeholder="Enter your address"
+            id="address"
+          /><br />
+        </div>
+        <button type="submit" onclick="getData()">Submit</button>
+      </form>
+      <div class="collection">
+        <h3>Garbage Collection cycling</h3>
+        <br />
+        <input type="checkbox" /> Everyday Collection<br />
+        <input type="checkbox" />Once Every two days collection<br />
+      </div>
+      <div class="dust-bin">
+        <h3>Your Need New Dust Bin</h3>
+        <br />
+        <input type="checkbox" />Yes<br />
+        <input type="checkbox" />No
+      </div>
+      <hr />
+    </div>
+    <!--java-->
+    <script>
+      //   function getData() {
+      //     const name = document.getElementIdby(name).value;
+      //     const phonenumber = document.getElementIdby(phonenumber).value;
+      //     const address = document.getElementIdby(address).value;
+      //     console.log(name);
+      //     console.log(phonenumber);
+      //     console.log(address);
+      //     window.location.href = "";
+
+      const user_email = localStorage.getItem("user-email");
+      console.log(user_email);
+      document.getElementById("email").value = user_email;
+    </script>
+  </body>
+</html>

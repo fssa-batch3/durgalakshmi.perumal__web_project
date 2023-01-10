@@ -112,6 +112,8 @@
               type="text"
               placeholder="Enter Email"
               required
+             
+              id="email"
             /><br />
 
             <label class="psw"><b>Password</b></label>
@@ -120,6 +122,8 @@
               type="password"
               placeholder="Enter Password"
               required
+              value="76438990908"
+              id="password"
             /><br />
 
             <label class="psw-repeat"><b>Repeat Password</b></label>
@@ -128,6 +132,8 @@
               type="password"
               placeholder="Repeat Password"
               required
+              value="76438990908"
+              id="confirm-password"
             /><br />
 
             <label>
@@ -141,16 +147,43 @@
             </p>
 
             <div class="clearfix">
-              <a href="main.html">
+              <a >
                 <button type="button" class="cancelbtn">Cancel</button>
               </a>
-              <a href="main.html">
-                <button type="submit" class="signupbtn">Sign Up</button></a
-              >
+              <!-- <a href="main.html"> -->
+
+              <!-- </a> -->
             </div>
           </div>
+        </form>
         </div>
-      </form>
+        <button type="button" onclick="submit()" class="signupbtn">
+          Sign Up
+        </button>
     </div>
+    <script>
+      function submit() {
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirm_password =document.getElementById("confirm-password").value;
+
+          console.log(email)
+          console.log(password)
+          console.log(confirm_password)
+          event.preventDefault()
+
+
+          localStorage.setItem("user-email",email)
+
+
+
+
+
+
+
+
+          window.location.href="./main.html"
+      }
+    </script>
   </body>
 </html>

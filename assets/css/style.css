@@ -1,58 +1,58 @@
-body {
-  width: 100%;
+.home {
+  transition: transition;
 }
-@media (max-width: 600px) {
-  .logo img {
-    height: 50px;
-  }
-}
-.header {
-  display: flex;
-  height: 150px;
-  background-color: white;
-}
-.head-cont {
-  display: flex;
-  margin-left: 770px;
-  font-size: 40px;
-  gap: 80px;
-
-  margin-top: 30px;
-  margin-bottom: 80px;
-}
-.content {
-  text-decoration: none;
-  color: #194569;
-  margin-top: 30px;
-}
-.content:hover {
+.home:hover {
   color: #020609;
   transform: scale(1.2);
 }
+.about {
+  transition: transition;
+}
+.about:hover {
+  color: #020609;
+  transform: scale(1.2);
+}
+.contact {
+  transition: transition;
+}
+.contact:hover {
+  color: #020609;
+  transform: scale(1.2);
+}
+.head-cont {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-size: 40px;
+  gap: 40px;
+  color: #10283d;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
 .logo {
   height: 150px;
   margin-top: 10px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 .img-1 {
-  display: flex;
-  height: 800px;
-  width: 1200px;
+  height: 630px;
+  width: 100%;
+  margin-top: 1%;
 }
-
+.img-1 img {
+  width: 100%;
+  height: 100%;
+}
 .section-2 {
   background-color: #bac7d2;
-  display: flex;
-  height: 800px;
+  height: 850px;
 }
 .para-1 {
-  font-size: 70px;
-  margin-left: 90px;
+  font-size: 300%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #194569;
-  margin-top: 180px;
-  display: flex;
-  height: 800px;
 }
 .a-name {
   font-size: 30px;
@@ -69,11 +69,12 @@ body {
   height: 500px;
 }
 .para-2 {
-  font-size: 100px;
+  font-size: 70px;
 
   color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-left: 80px;
+  margin-top: 70px;
 }
 .btn-1 {
   height: 100px;
@@ -82,10 +83,11 @@ body {
   background-color: white;
   color: #194569;
   border: none;
-  margin-left: 600px;
+  margin-left: 300px;
   border-radius: 35px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   box-shadow: 20px 20px 50px rgb(58, 55, 55);
+  margin-top: 90px;
 }
 
 .btn-1:hover {
@@ -98,7 +100,7 @@ body {
   background-color: #10283d;
   height: 400px;
   color: white;
-  margin-bottom: 900;
+  /* margin-bottom: 900; */
 }
 .list-1 {
   font-size: 30px;
@@ -109,6 +111,8 @@ body {
 .list-1 a {
   text-decoration: none;
   color: #efedf1;
+  margin-left: 20px;
+  font-size: 20px;
 }
 .fi {
   height: 40px;
@@ -117,6 +121,12 @@ body {
   gap: 60px;
 }
 
-.list-2 {
-  margin-left: 60px;
+.list-3 {
+  margin-left: 30px;
+}
+h1 {
+  font-size: 20px;
+}
+.section-1 {
+  background-color: white;
 }
