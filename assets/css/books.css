@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kids</title>
+  </head>
+  <style>
+    .head {
+      display: inline-block;
+    }
+    .box-1 {
+      background-color: #122f47;
+      gap: 500px;
+      height: 410px;
+      width: 390px;
+      border-radius: 20px;
+    }
+    body {
+      background-color: #abbece;
+    }
+    .tre {
+      font-size: 60px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      color: #f0f3f5;
+    }
+    .tb-1 {
+      height: 280px;
+      margin-left: 80px;
+      margin-top: 30px;
+    }
+    .tbtn-1 {
+      padding: 5%;
+      background-color: #7296b4;
+      color: #f4f7f9;
+      border: none;
+      border-radius: 15px;
+      margin-left: 150px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: transform 0.1s;
+      text-decoration:none;
+    }
+    .tbtn-1:hover {
+      background-color: white;
+      color: #194569;
+      transform: scale(1.3);
+    }
+    .read-box{
+        margin-top: 35px;
+    }
+    hr {
+      margin-left: 20px;
+      margin-right: 20px;
+      /* border: #e2dce8; */
+    }
+    .c-1 {
+      display: flex;
+      gap: 50px;
+      margin-left: 65px;
+    }
+
+    .box-1 {
+      box-shadow: 20px 20px 50px rgb(10, 10, 10);
+    }
+  </style>
