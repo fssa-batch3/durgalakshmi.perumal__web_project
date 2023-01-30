@@ -5,72 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>happy</title>
-    <style>
-      .homep {
-        height: 60px;
-        width: 250px;
-        margin-left: 1500px;
-        font-size: 25px;
-        border-radius: 10px;
-        background-color: #aecde8;
-        margin-top: 000px;
-        border: none;
-      }
-      .homep:hover {
-        background-color: #194569;
-        color: aliceblue;
-      }
-      .logo {
-        margin-left: 600px;
-        margin-bottom: 50px;
-      }
-      .header {
-        background-color: white;
-        height: 400px;
-      }
-
-      .audio {
-        width: 1000px;
-        margin-left: 100px;
-        gap: 100px;
-        margin-top: 80px;
-      }
-      body {
-        background-color: #194569;
-      }
-      .c-1 {
-        display: flex;
-        margin-top: 100px;
-        background-color: #092a46;
-        margin-left: 100px;
-        margin-right: 100px;
-        border-radius: 20px;
-        height: 200px;
-      }
-      .piano {
-        height: 150px;
-        width: 150px;
-        border-radius: 15px;
-        margin-left: 20px;
-        margin-top: 20px;
-      }
-      p {
-        font-size: 30px;
-        color: aliceblue;
-        margin-left: 80px;
-        margin-top: 90px;
-      }
-      .heart {
-        height: 30px;
-        width: 30px;
-        margin-top: 90px;
-        margin-left:20px;
-      }
-      .heart:hover{
-        background-color:palevioletred;
-        border-radius: 30px;
-      }
-    </style>
+    <link rel="stylesheet" href="./../assets/css/music.css" />
   </head>
   <body>
     <div class="header">
@@ -78,10 +13,10 @@
       <a href="./main.html"> <button class="homep">back</button></a>
     </div>
     <div class="All">
-      <div class="c-1">
-        <img class="piano" src="./../assets/images/piano.jpeg" />
-        <p>Classical Piano</p>
-        <img class="heart" src="./../assets/images/cards-heart-outline.png"></imag>
+      <div class="c-1"></div>
+      <!-- <img class="piano" src="./../assets/images/piano.jpeg" />
+        <p>Classical Piano</p> -->
+      <!-- <img class="heart" src="./../assets/images/cards-heart-outline.png"></imag>
         <audio class="audio" controls>
           <source
             type="audio/mpeg"
@@ -91,7 +26,8 @@
       </div>
       <div class="c-1">
         <img class="piano" src="./../assets/images/piano.jpeg" />
-        <p>Jazzes Piano</p>
+        </div> -->
+      <!-- <p>Jazzes Piano</p>
         <img class="heart" src="./../assets/images/cards-heart-outline.png"></imag>
         <audio class="audio" controls>
           <source
@@ -221,7 +157,78 @@
             src="./../assets/vedios//peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3"
           />
         </audio>
-      </div>
+      </div> -->
     </div>
+    <script>
+      //card//
+      let div_songbox
+      let img_piano
+      let audio
+      // let a_card;
+
+      // for (let i = 0; i < card.length; i++) {
+      div_songbox = document.createElement("div")
+      div_songbox.setAttribute("class", "c-1")
+      console.log(div_songbox)
+
+      // piano-img //
+      img_piano = document.createElement("img")
+      img_piano.setAttribute("src", "./../assets/images/piano.jpeg")
+      img_piano.setAttribute("alt", "song-img")
+      img_piano.setAttribute("class", "piano")
+      div_piano.append(img_piano)
+
+      //audio//
+      div_audio = document.createElement("audio")
+      div_audio.setAttribute("class", "audio")
+      div_audio.setAttribute(
+        "src",
+        "./../assets/vedios//peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3"
+      )
+      console.log(div_audio)
+      div_songbox.append(div_songbox)
+
+      document.querySelector("body").append(div_songbox)
+
+      //array of objects//
+      let box = [
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+        {
+          img: "./../assets/images/sbook-1.png",
+        },
+      ]
+    </script>
   </body>
 </html>

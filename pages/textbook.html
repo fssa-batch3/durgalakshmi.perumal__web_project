@@ -215,42 +215,6 @@
         </div> -->
     </div>
     <script>
-      //card//
-      let div_card
-      let img_card
-      let hr
-      let a_card
-
-      div_card = document.createElement("div")
-      div_card.setAttribute("class", "box-1")
-      console.log(div_card)
-
-      // card-img //
-      img_card = document.createElement("img")
-      img_card.setAttribute("src", "./../assets/images/sbook-1.png")
-      img_card.setAttribute("alt", "book-img")
-      img_card.setAttribute("class", "tb-1")
-      div_card.append(img_card)
-
-      // for hr tag
-      hr_card = document.createElement("hr")
-      div_card.append(hr_card)
-      //button-for-read//
-      div_read = document.createElement("div")
-      div_read.setAttribute("class", "read-box")
-      console.log(div_read)
-      div_card.append(div_read)
-
-      //read//
-      a_card = document.createElement("a")
-      a_card.setAttribute("class", "tbtn-1")
-      a_card.setAttribute("href", "#")
-      a_card.innerText = "Read"
-
-      div_read.append(a_card)
-
-      document.querySelector("body").append(div_card)
-
       //array of objects//
       let box = [
         {
@@ -290,6 +254,46 @@
           img: "./../assets/images/sbook-1.png",
         },
       ]
+      //card//
+
+      let div_card
+      let img_card
+      let hr
+      let a_card
+
+      for (let i = 0; i < box.length; i++) {
+        //whole_card//
+
+        div_card = document.createElement("div")
+        div_card.setAttribute("class", "box-1")
+        console.log(div_card)
+
+        // card-img //
+        img_card = document.createElement("img")
+        img_card.setAttribute("src", box[i]["img"])
+        img_card.setAttribute("alt", "book-img")
+        img_card.setAttribute("class", "tb-1")
+        div_card.append(img_card)
+
+        // for hr tag
+        hr_card = document.createElement("hr")
+        div_card.append(hr_card)
+        //button-for-read//
+        div_read = document.createElement("div")
+        div_read.setAttribute("class", "read-box")
+
+        div_card.append(div_read)
+
+        //read//
+        a_card = document.createElement("a")
+        a_card.setAttribute("class", "tbtn-1")
+        a_card.setAttribute("href", "#")
+        a_card.innerText = "Read"
+
+        div_read.append(a_card)
+
+        document.querySelector(".c-1").append(div_card)
+      }
     </script>
   </body>
 </html>
