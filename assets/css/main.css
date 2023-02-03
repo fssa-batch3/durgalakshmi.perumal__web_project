@@ -13,9 +13,9 @@
   width: 40px;
   border-radius: 20px;
 }
-.sign {
+.rack-boks {
   height: 50px;
-  width: 130px;
+  width: 160px;
   font-size: 20px;
   cursor: pointer;
   /* margin-left:65%; */
@@ -27,7 +27,7 @@
   border: none;
   /* margin-bottom:000px; */
 }
-.sign:hover {
+.rack-boks:hover {
   background-color: #194569;
   color: white;
 }
