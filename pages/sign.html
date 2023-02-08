@@ -100,7 +100,7 @@
   <body>
     <div>
       <img class="b-img" src="./../assets/images/frame pic-2.png" alt="frame" />
-      <form>
+      <form id="form-sign">
         <div class="container">
           <div class="con-1">
             <h1>Sign Up</h1>
@@ -133,7 +133,7 @@
               placeholder="Repeat Password"
               required
               value="76438990908"
-              id="confirm-password"
+              id="confirm_password"
             /><br />
 
             <label>
@@ -145,9 +145,7 @@
               By creating an account you agree to our
               <a class="term" href="#">Terms & Privacy</a>.
             </p>
-            <button type="button" onclick="submit()" class="signupbtn">
-              Sign Up
-            </button>
+           
 
             <div class="clearfix">
               <a >
@@ -156,36 +154,65 @@
               <!-- <a href="main.html"> -->
 
               <!-- </a> -->
+              <button type="submit"  class="signupbtn">
+                Sign Up
+              </button>
             </div>
+           
            
           </div>
         </form>
+        
         </div>
         
     </div>
     <script>
-      function submit() {
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const confirm_password =document.getElementById("confirm-password").value;
+      // function submit() {
+      //   const email = document.getElementById("email").value;
+      //   const password = document.getElementById("password").value;
+      //   const confirm_password =document.getElementById("confirm-password").value;
 
-          console.log(email)
-          console.log(password)
-          console.log(confirm_password)
-          event.preventDefault()
-
-
-          localStorage.setItem("user-email",email)
+      //     console.log(email)
+      //     console.log(password)
+      //     console.log(confirm_password)
+      //     event.preventDefault()
 
 
+      //     localStorage.setItem("user-email",email);
+      //     localStorage.setItem("user-password",password);
+      //     localStorage.setItem("user-confirm-password",confirm-password);
+
+
+         
 
 
 
 
 
 
-          window.location.href="./main.html"
-      }
+      //     window.location.href="./main.html"
+      // }
+      const signupfrom = document.getElementById("form-sign");
+    signupfrom.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let Newuser = [];
+        if (localStorage.getItem("register") != null) {
+            userNew = JSON.parse(localStorage.getItem("register"));
+        }
+        
+        const getEmail = document.getElementById("email").value;
+        const getPassword = document.getElementById("password").value;
+        const getConfirmPassword = document.getElementById("confirm_password").value;
+        let userData = {
+           
+            getEmail,
+            getPassword,
+            getConfirmPassword,
+        }
+        Newuser.push(userData);
+        const str = JSON.stringify(Newuser);
+        localStorage.setItem("register", str);
+    })
     </script>
   </body>
 </html>
