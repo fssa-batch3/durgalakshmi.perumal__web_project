@@ -100,40 +100,44 @@
   <body>
     <div>
       <img class="b-img" src="./../assets/images/frame pic-2.png" alt="frame" />
-      <form id="form-sign">
+      <form onsubmit="userInput()" id="form-sign">
         <div class="container">
           <div class="con-1">
             <h1>Sign Up</h1>
             <p>Please fill in this form to create an account.</p>
             <hr />
-            <label class="email"><b>Email</b></label>
+            <!-- email -->
+            <label for="email" class="email"><b>Email</b></label>
             <input
               class="fb"
-              type="text"
+              type="email"
               placeholder="Enter Email"
-              required
-             
-              id="email"
-            /><br />
 
-            <label class="psw"><b>Password</b></label>
+              title="enter your email" 
+              id="email"
+              
+            /><br />
+<!-- password -->
+            <label for="pwd" class="psw"><b>Password</b></label>
             <input
               class="fb"
               type="password"
-              placeholder="Enter Password"
               required
-              value="76438990908"
+              placeholder="Enter Password"
+              pattern="[A-Za-z0-9]{0,25}$"
+              title="enter your password"
               id="password"
             /><br />
-
+<!-- confirm password -->
             <label class="psw-repeat"><b>Repeat Password</b></label>
             <input
               class="fb"
               type="password"
-              placeholder="Repeat Password"
               required
-              value="76438990908"
-              id="confirm_password"
+              placeholder="Repeat Password"
+              pattern="[A-Za-z0-9]{0,25}$"
+              title="password is not matching"
+              id="conpwd"
             /><br />
 
             <label>
@@ -148,12 +152,9 @@
            
 
             <div class="clearfix">
-              <a >
+             
                 <button type="button" class="cancelbtn">Cancel</button>
-              </a>
-              <!-- <a href="main.html"> -->
-
-              <!-- </a> -->
+          
               <button type="submit"  class="signupbtn">
                 Sign Up
               </button>
@@ -167,52 +168,49 @@
         
     </div>
     <script>
-      // function submit() {
-      //   const email = document.getElementById("email").value;
-      //   const password = document.getElementById("password").value;
-      //   const confirm_password =document.getElementById("confirm-password").value;
-
-      //     console.log(email)
-      //     console.log(password)
-      //     console.log(confirm_password)
-      //     event.preventDefault()
-
-
-      //     localStorage.setItem("user-email",email);
-      //     localStorage.setItem("user-password",password);
-      //     localStorage.setItem("user-confirm-password",confirm-password);
-
-
-         
-
-
-
-
-
-
-      //     window.location.href="./main.html"
-      // }
-      const signupfrom = document.getElementById("form-sign");
-    signupfrom.addEventListener("submit", function (event) {
-        event.preventDefault();
-        let Newuser = [];
-        if (localStorage.getItem("register") != null) {
-            userNew = JSON.parse(localStorage.getItem("register"));
-        }
-        
-        const getEmail = document.getElementById("email").value;
-        const getPassword = document.getElementById("password").value;
-        const getConfirmPassword = document.getElementById("confirm_password").value;
-        let userData = {
-           
-            getEmail,
-            getPassword,
-            getConfirmPassword,
-        }
-        Newuser.push(userData);
-        const str = JSON.stringify(Newuser);
-        localStorage.setItem("register", str);
-    })
+  let array = [];
+            function userInput() {
+                event.preventDefault();
+                if (localStorage.getItem("usersdetails") != null) {
+                    array = JSON.parse(localStorage.getItem("usersdetails"));
+                }
+              
+                let email = document.getElementById("email").value.trim();
+                let password = document.getElementById("password").value.trim();
+                let conpassword = document.getElementById("conpwd").value.trim();
+                let emailId = isEmailExist(email);
+                
+                if (password != conpassword) {
+                    alert("Invalid credentials")
+                   
+                } else  if (emailId === true) {
+                    alert("Email already exists")
+                    
+                }
+                else {
+                 
+                    let sign_user_data = {
+                      
+                        "user_email": email.toLowerCase(),
+                        "user_pass": password,
+                        "user_conpwd": conpassword,
+                    }
+                    array.push(sign_user_data);
+                    let arrayupdate = JSON.stringify(array);
+                    localStorage.setItem("usersdetails", arrayupdate);
+                   
+                }
+            }
+            function isEmailExist(email) {
+                let isExist = false;
+                for (let i = 0; i < array.length; i++) {
+                    if (email == array[i].user_email) {
+                        isExist = true;
+                        break;
+                    }
+                }
+                return isExist
+            }
     </script>
   </body>
 </html>
