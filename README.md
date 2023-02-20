@@ -39,4 +39,14 @@ USER FLOW:https://drive.google.com/drive/folders/1jRsgGVSZeY-G7ZwEEq7-Q1EgWBA2h3
 WIRE FRAME:https://drive.google.com/drive/folders/1MujP56CQubAWrFWZ2Z-JkE4NBnzTmIFt
 
 
+
+books crud      -till 22
+add books       -
+book list       -
+books details   -
+uplade books    -
+diable or close -
+
+
+
 SONARCLOUD:https://sonarcloud.io/project/overview?id=fssa-batch3_durgalakshmi.perumal__web_project
