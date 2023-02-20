@@ -100,7 +100,7 @@
   <body>
     <div>
       <img class="b-img" src="./../assets/images/frame pic-2.png" alt="frame" />
-      <form onsubmit="userInput()" id="form-sign">
+      <form id="form-sign">
         <div class="container">
           <div class="con-1">
             <h1>Sign Up</h1>
@@ -163,29 +163,40 @@
            
           </div>
         </form>
-        
+       
         </div>
         
     </div>
     <script>
-  let array = [];
-            function userInput() {
-                event.preventDefault();
+  
+           const signup = document.getElementById("form-sign");
+           signup.addEventListener("submit",function (event){
+            event.preventDefault();
+            let array = [];
+
                 if (localStorage.getItem("usersdetails") != null) {
                     array = JSON.parse(localStorage.getItem("usersdetails"));
                 }
-              
+              let match = false
                 let email = document.getElementById("email").value.trim();
                 let password = document.getElementById("password").value.trim();
                 let conpassword = document.getElementById("conpwd").value.trim();
-                let emailId = isEmailExist(email);
+     
                 
                 if (password != conpassword) {
                     alert("Invalid credentials")
                    
-                } else  if (emailId === true) {
-                    alert("Email already exists")
+                } else  {
+                   for(let i = 0; i < array.length; i++){
+                    if (array[i]["user_email"] === email){
+                      match = true;
+                    }
+                   }
                     
+                }
+
+                if(match === true){
+                  alert("The email is already exists")
                 }
                 else {
                  
@@ -198,19 +209,21 @@
                     array.push(sign_user_data);
                     let arrayupdate = JSON.stringify(array);
                     localStorage.setItem("usersdetails", arrayupdate);
+                    window.location.href = "./../pages/login.html";
                    
                 }
-            }
-            function isEmailExist(email) {
-                let isExist = false;
-                for (let i = 0; i < array.length; i++) {
-                    if (email == array[i].user_email) {
-                        isExist = true;
-                        break;
-                    }
-                }
-                return isExist
-            }
+              })
+            
+            // function isEmailExist(email) {
+            //     let isExist = false;
+            //     for (let i = 0; i < array.length; i++) {
+            //         if (email == array[i].user_email) {
+            //             isExist = true;
+            //             break;
+            //         }
+            //     }
+            //     return isExist
+            // }
     </script>
   </body>
 </html>

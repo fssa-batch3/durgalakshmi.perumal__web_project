@@ -216,10 +216,10 @@
         event.preventDefault()
 
         let test = JSON.parse(localStorage.getItem("usersdetails"))
-        console.log(test)
+        // console.log(test)
 
-        const getEmail = document.getElementById("Email").value.trim()
-        const getPassword = document.getElementById("Password").value.trim()
+        const getEmail = document.getElementById("Email").value
+        const getPassword = document.getElementById("Password").value
 
         //alert
 
@@ -227,25 +227,23 @@
 
         for (let i = 0; i < test.length; i++) {
           // profile form
-          let user = JSON.parse(localStorage.getItem("usersdetails"))
-          console.log(user[i])
+          // let user = JSON.parse(localStorage.getItem("usersdetails"))
+          // console.log(user[i])
 
-          window.localStorage.setItem("details", JSON.stringify(user[i]))
+          localStorage.setItem("details", JSON.stringify(test[i].user_email))
 
           if (
-            getEmail == test[i].getEmail &&
-            getPassword == test[i].getConfirmPassword
+            getEmail == test[i].user_email &&
+            getPassword == test[i].user_pass
           ) {
-            window.location.href = "./../index.html"
             ifMatch = true
             break
-          } else {
-            ifMatch = false
           }
         }
         // for match
         if (ifMatch == true) {
           alert("Success")
+          window.location.href = "../pages/profile.html"
         } else {
           alert("Invalid credentials")
         }
