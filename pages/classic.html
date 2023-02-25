@@ -125,11 +125,17 @@
       ]
       //card//
 
-      let div_card
-      let img_card
-      let img_name
-      let hr
-      let a_card
+      let div_card;
+      let img_card;
+      let img_name;
+      let hr;
+      let a_card;
+    
+
+
+      // let create_box = JSON.parse(localStorage.getItem ("form"))
+      // box = create_box;
+
 
       for (let i = 0; i < box.length; i++) {
         //whole_card//
@@ -139,6 +145,7 @@
         console.log(div_card)
 
         // card-img //
+        
         img_card = document.createElement("img")
         img_card.setAttribute("src", box[i]["img"])
         img_card.setAttribute("alt", box[i]["alt"])

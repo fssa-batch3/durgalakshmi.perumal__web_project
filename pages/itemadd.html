@@ -20,44 +20,57 @@
     }
   </style> -->
   <body>
-    <!-- <form>
-      <label for="img" class="t-form">Image url:</label><br />
-      <input type="text" class="form" placeholder="Image url" /> <br />
-      <label for="lname" class="t-form">Book name:</label><br />
-      <input type="text" class="form" placeholder="ente book name" /><br />
-
-      <label for="img" class="t-form">Pdf url:</label><br />
-      <input type="text" class="form" placeholder="pdf url" />
-    </form> -->
     <br />
-    <form>
+    <form id="form">
       <div class="mb-3 form-control container">
         <!-- div 1 -->
         <div>
-          <label for="img" class="form-label">Image url:</label>
-          <input type="text" class="form-control" required />
+          <label  for="img" class="form-label">Image url:</label>
+          <input id="img_url" type="text" class="form-control" required />
         </div>
         <br />
         <!-- div 2 -->
         <div>
           <label for="text" class="form-label">Book name:</label>
-          <input type="text" class="form-control" required />
+          <input  id="bok_name" type="text" class="form-control" required />
         </div>
         <br />
         <!-- div 3 -->
         <div>
-          <label for="text" class="form-label">Pdf url:</label>
-          <input type="text" class="form-control" required />
+          <label  for="text" class="form-label">Pdf url:</label>
+          <input  id="pdf_url" type="text" class="form-control" required />
         </div>
 
         <br />
         <div class="d-grid d-md-block container">
-          <button class="btn btn-success" type="button" onclick="submitForm()">
-            Submit
-          </button>
+          <button class="btn btn-success" type="submit">Submit</button>
         </div>
       </div>
     </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+      const additem = document.getElementById("form")
+      additem.addEventListener("submit", function (event) {
+        event.preventDefault()
+     
+        let Image_url = document.getElementById("img_url").value;
+        let book_name = document.getElementById("bok_name").value;
+        let pdf_url = document.getElementById("pdf_url").value;
+
+        let newproduct = {
+        "img": Image_url,
+        "book_name": book_name,
+        "bok_link": pdf_url
+      };
+      // console.log(newproduct);
+      localStorage.setItem("form", JSON.stringify(newproduct))
+
+
+      })
+
+   
+
+     
+    </script>
   </body>
 </html>
