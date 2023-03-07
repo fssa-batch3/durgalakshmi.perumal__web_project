@@ -10,15 +10,7 @@
     />
     <title>additem</title>
   </head>
-  <!-- <style>
-    .form {
-      height: 30px;
-      width: 30%;
-    }
-    .t-form {
-      font-size: 40px;
-    }
-  </style> -->
+ 
   <body>
     <br />
     <form id="form">
@@ -47,24 +39,50 @@
         </div>
       </div>
     </form>
+
+
+    <!-- JAVA SCRIPT -->
     <script>
 
       const additem = document.getElementById("form")
       additem.addEventListener("submit", function (event) {
-        event.preventDefault()
-     
+        event.preventDefault();
+
+
+        let id = Date.now();
         let Image_url = document.getElementById("img_url").value;
         let book_name = document.getElementById("bok_name").value;
         let pdf_url = document.getElementById("pdf_url").value;
+        // console.log("1");
 
         let newproduct = {
+          "id" : id,
         "img": Image_url,
         "book_name": book_name,
-        "bok_link": pdf_url
+        "bok_link": pdf_url,
+        
       };
-      // console.log(newproduct);
-      localStorage.setItem("form", JSON.stringify(newproduct))
+      // console.log("2");
 
+      let array=JSON.parse(localStorage.getItem("form"))
+      console.log(array);
+
+// Checking an array is null or not
+    if(localStorage.getItem("form") != null){
+      array = JSON.parse(localStorage.getItem("form"))
+      console.log("1")
+    }
+
+
+ 
+
+      array.push(newproduct);
+      
+      console.log(newproduct);
+
+      localStorage.setItem("form", JSON.stringify(array));
+       alert("successfully added")
+       window.location.href ="./trend.html"
 
       })
 

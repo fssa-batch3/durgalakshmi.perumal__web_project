@@ -57,27 +57,24 @@
     </div>
 
     <script>
-      let current_email=JSON.parse(localStorage.getItem("details"))
+      let current_email = JSON.parse(localStorage.getItem("details"))
 
-     const user_about = JSON.parse (localStorage.getItem("usersdetails"))
-    //  console.log(user_about)
+     let user_about = JSON.parse(localStorage.getItem("usersdetails"))
+     console.log(user_about)
 
-    let user_obj = user_about.find(function (user) {
-            let check_email = user["user_email"]
-            if (current_email === check_email) {
-                return true;
+     let User_obj = user_about.find(function (user_about) {
+            let check_email = user_about["user_email"]
+            if (current_email == check_email) {
+              console.log("2");
+                return true;  
             }
         })
         // console.log(user_obj);
 
-    //  let  mail = document.getElementById("email");
-    //  let pass = document.getElementById("password");
+
+
+
   
-
-
-
-
-  // 
       
         let mail = document.getElementById("email");      
        
@@ -106,10 +103,10 @@
                 
             };
 
-            let checked_obj = Object.assign(user_obj, user_object)
+            let checked_obj = Object.assign( User_obj,user_object)
             console.log(checked_obj);
             
-            let index = user_about.indexOf(user_obj);
+            let index = user_about.indexOf(User_obj);
             console.log(index);
 
             user_about[index] = checked_obj;
@@ -118,9 +115,9 @@
 
             alert("Successfully changed")
 
-            location.reload();
+            // location.reload();
         }) 
-
+          let check = true;
         let present_details = user_about.find(function (user) {
             let check_email = user["user_email"]
             if (current_email === check_email) {
@@ -143,7 +140,7 @@
         let user_delete = document.getElementById("btn-delete");
         user_delete.addEventListener("click", function (event) {
             event.preventDefault()
-            let Index = user_about.indexOf(user_obj)
+            let Index = user_about.indexOf(User_obj)
             let msg = confirm("Are you sure want to delete your account")
             if (msg !== true) {
                 return

@@ -45,8 +45,11 @@
         </button>
       </div>
     </div>
-    <h1 class="tre">Triller Books</h1>
-    <div class="c-1"></div>
+    <h1 class="tre">Classic Books</h1>
+    <div class="c-1">
+
+
+    </div>
     <script>
       //array of objects//
       let box = [
@@ -132,17 +135,20 @@
       let a_card;
     
 
-
-      // let create_box = JSON.parse(localStorage.getItem ("form"))
+      let create_box = JSON.parse(localStorage.getItem ("form"))
+    
       // box = create_box;
+      console.log(create_box);
+    
 
 
       for (let i = 0; i < box.length; i++) {
+        const user = box[i]
         //whole_card//
 
         div_card = document.createElement("div")
         div_card.setAttribute("class", "box-1")
-        console.log(div_card)
+     
 
         // card-img //
         
@@ -161,10 +167,10 @@
         // for hr tag
         hr_card = document.createElement("hr")
         div_card.append(hr_card)
+
         //button-for-read//
         div_read = document.createElement("div")
         div_read.setAttribute("class", "read-box")
-
         div_card.append(div_read)
 
         //read//
@@ -177,6 +183,6 @@
         document.querySelector(".c-1").append(div_card)
       }
     </script>
-    </script>
+    
   </body>
 </html>
