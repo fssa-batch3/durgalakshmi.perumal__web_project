@@ -97,7 +97,7 @@ console.log(checked_obj);
 localStorage.setItem("form",JSON.stringify(box))
 
 alert("Successfully changed")
-
+45348
 window.location.href = "./trend.html";
 
 })
@@ -113,6 +113,7 @@ delete_card.addEventListener("click", function (event) {
             else{
               box.splice(Index, 1);
                 console.log(box);
+                localStorage.setItem("form", JSON.stringify(box))
                 window.location.href = "./trend.html";
             }
            
