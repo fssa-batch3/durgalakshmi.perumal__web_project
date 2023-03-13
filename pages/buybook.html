@@ -34,11 +34,11 @@
 }
     .box-1 {
       background-color: #122f47;
-      gap: 500px;
+     position: relative;
       height: 310px;
       width: 520px;
       border-radius: 20px;
-      display: flex;
+      display:flex;
       box-shadow: 20px 20px 50px rgb(10, 10, 10);
     }
     body {
@@ -78,21 +78,27 @@
    }
    
   a.buybtn{
-    padding: 15%;
+    padding: 10%;
   background-color: #7296b4;
   color: #f4f7f9;
   border: none;
-  border-radius: 10px;
-  /* margin-right:100%;
-  margin-top: 15px; */
+  border-radius: 10%;
+  margin-right:100%;
+ 
   cursor: pointer;
   transition: transform 0.1s;
   text-decoration: none;
+ 
 }
-.buybtn:hover {
+a.buybtn:hover {
   background-color: white;
   color: #194569;
   transform: scale(1.3);
+}
+.btn_div{
+  height: fit-content;
+  margin-top:40%;
+  margin-left:10%;
 }
   
   
@@ -254,7 +260,7 @@
 
    //button-for-read//
    div_buy = document.createElement("div")
-
+   div_buy.setAttribute("class", "btn_div")
    box_div.append(div_buy)
  //buy books
   buy_btn = document.createElement("a")
@@ -267,7 +273,7 @@
   edit_btn.setAttribute("class", "buybtn")
   // edit_btn.setAttribute("href","./../pages/edititem.html?id="+box[i]["id"])
   edit_btn.innerText = "EDIT"
-  box_div.append(edit_btn)
+  div_buy.append(edit_btn)
 
   document.querySelector(".title").append(box_div)
 
