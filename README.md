@@ -40,12 +40,19 @@ WIRE FRAME:https://drive.google.com/drive/folders/1MujP56CQubAWrFWZ2Z-JkE4NBnzTm
 
 
 
-books crud      -till 22
-add books       -
-book list       -
-books details   -
-uplade books    -
-diable or close -
+books crud      -completed
+add books       -completed
+book list       -completed
+books details   -completed
+uplade books    -completed
+diable or close -completed
+
+
+register user-completed
+read books-completed
+buy books- completed
+song list-not completed
+rack crud- not completed
 
 
 
