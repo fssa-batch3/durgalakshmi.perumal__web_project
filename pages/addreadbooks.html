@@ -70,19 +70,14 @@
 // Checking an array is null or not
     if(localStorage.getItem("form") != null){
       array = JSON.parse(localStorage.getItem("form"))
-      console.log("1")
+     
     }
-
-
- 
-
       array.push(newproduct);
-      
       console.log(newproduct);
 
       localStorage.setItem("form", JSON.stringify(array));
        alert("successfully added")
-       window.location.href ="./trend.html"
+      //  window.location.href ="./trend.html"
 
       })
 
@@ -90,5 +85,6 @@
 
      
     </script>
+   
   </body>
 </html>
