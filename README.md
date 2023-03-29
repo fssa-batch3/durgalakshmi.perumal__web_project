@@ -47,6 +47,13 @@ books details   -completed
 uplade books    -completed
 diable or close -completed
 
+register user-completed
+read books-completed
+buy books- completed
+song list-not completed
+rack crud- not completed
+
+
 
 
 SONARCLOUD:https://sonarcloud.io/project/overview?id=fssa-batch3_durgalakshmi.perumal__web_project

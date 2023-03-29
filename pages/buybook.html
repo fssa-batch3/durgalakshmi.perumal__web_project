@@ -29,7 +29,7 @@
   color: aliceblue;
   height: 310px;
    width: 250px;
-   margin-left:17%;
+   /* margin-left:17%; */
    margin-top:3%;
 }
     .box-1 {
@@ -198,7 +198,7 @@ a.buybtn:hover {
     </div>
    
     <!-- 111111111111 -->
-    <!-- <div class="set-1">
+    <div class="set-1">
       <div class="c-1">
         <div class="tbook-1">
           <div class="box-1">
@@ -225,19 +225,37 @@ a.buybtn:hover {
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
      
     </div>  
 
    <script>
-    let boxdiv
-    let bookimg
-  
-    let para_div
-    let div_btn
-    let buy_btn
-    let edit_btn
+     let buybox=[]
 
+    //  localStorage.setItem("formtoaddbuybooks", JSON.stringify(buybox));
+// console.log("1");
+    let boxdiv;
+    let bookimg;
+    let para_div;
+    let div_btn;
+    let buy_btn;
+    let edit_btn;
+      
+    
+  
+    
+    let  addbuybooks = JSON.parse(localStorage.getItem("formtoaddbuybooks"))
+    console.log("2");
+    
+    for(let i=0 ;i<addbuybooks.length;i++){
+      buybox.push(addbuybooks[i]);
+      console.log("3");
+
+    }
+    for(let i = 0;i < buybox.length;i++){
+      const card = buybox[i];
+
+    
   //whole card
     box_div = document.createElement("div")
     box_div.setAttribute("class","box-1")
@@ -246,7 +264,7 @@ a.buybtn:hover {
   //book img
   book_img = document.createElement("img")
   book_img.setAttribute("class","tb-1")
-  book_img.setAttribute("src","./../assets/images/sbook-1.png")
+  book_img.setAttribute("src",buybox[i]["bookimg"])
   book_img.setAttribute("alt","buybook")
   box_div.append(book_img)
 
@@ -255,7 +273,7 @@ a.buybtn:hover {
   //para
   para_div= document.createElement("p")
   para_div.setAttribute("class","bpara")
-  para_div.innerText ="this is a book used to read this is the book used to read this is the book used to read this is the book used to read "
+  para_div.innerText =buybox[i]["para_div"]
   box_div.append(para_div)
 
    //button-for-read//
@@ -265,7 +283,7 @@ a.buybtn:hover {
  //buy books
   buy_btn = document.createElement("a")
   buy_btn.setAttribute("class", "buybtn")
-  buy_btn.setAttribute("href","./../assets/images/sbook-1.png")
+  buy_btn.setAttribute("href","")
   buy_btn.innerText = "Buynow"
   div_buy.append(buy_btn)
 
@@ -277,7 +295,7 @@ a.buybtn:hover {
 
   document.querySelector(".title").append(box_div)
 
-
+    }
 
 
 
