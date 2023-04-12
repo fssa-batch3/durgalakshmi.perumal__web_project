@@ -6,15 +6,25 @@
 .head {
   background-color: white;
   width: 100%;
+  gap:30px;
+}
+
+
+.head_btn{
+
+ margin-left:20px;
+
+
 }
 .sec-1img {
   width: 100%;
   height: 700px;
   position: relative;
 }
-.sec-1heading {
+.sec1_content {
   position: absolute;
-  margin-top: 300px;
+  z-index:-7;
+  
 }
 div.section-2 {
   text-align: center;

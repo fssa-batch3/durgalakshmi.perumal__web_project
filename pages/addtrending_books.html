@@ -13,7 +13,7 @@
  
   <body>
     <br />
-    <form id="form">
+    <form id="trendfrom">
       <div class="mb-3 form-control container">
         <!-- div 1 -->
         <div>
@@ -37,15 +37,17 @@
         <div class="d-grid d-md-block container">
           <button class="btn btn-success" type="submit">Submit</button>
         </div>
+<br>
+       
+         <a href="./editreadbooks.html">change</a>
       </div>
-      
     </form>
 
 
     <!-- JAVA SCRIPT -->
     <script>
 
-      const additem = document.getElementById("form")
+      const additem = document.getElementById("trendfrom")
       additem.addEventListener("submit", function (event) {
         event.preventDefault();
 
@@ -56,8 +58,8 @@
         let pdf_url = document.getElementById("pdf_url").value;
         // console.log("1");
 
-        let newproduct = {
-          "id" : id,
+        let trendnew = {
+         "id" : id,
         "img": Image_url,
         "book_name": book_name,
         "bok_link": pdf_url,
@@ -65,20 +67,20 @@
       };
       // console.log("2");
 
-      let array=JSON.parse(localStorage.getItem("form"))
+      let array=JSON.parse(localStorage.getItem("trendfrom"))
       console.log(array);
 
 // Checking an array is null or not
-    if(localStorage.getItem("form") != null){
-      array = JSON.parse(localStorage.getItem("form"))
-      array.push(newproduct);
+    if(localStorage.getItem("trendfrom") != null){
+      array = JSON.parse(localStorage.getItem("trendfrom"))
+      
     }
-    
-      console.log(newproduct);
+    array.push(trendnew);
+    //   console.log(trendnew);
 
-      localStorage.setItem("form", JSON.stringify(array));
+      localStorage.setItem("trendfrom", JSON.stringify(array));
        alert("successfully added")
-      //  window.location.href ="./readbooks.html"
+       window.location.href ="../index.html";
 
       })
 

@@ -1,120 +1,281 @@
-<!DOCTYPE >
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>livre</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
+    <title>Livre</title>
+    <link rel="stylesheet" href="./../assets/css/main.css" />
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     />
   </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg container"
-      style="display: flex; justify-content: space-between"
-    >
-      <div class="container">
-        <div><img class="logo" src="./assets/images/dulogo.png" /></div>
+  <style>
 
+    .sec-3{
+      display: flex;
+
+    margin-top:100px;
+    }
+    .card {
+   height:300px;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-title {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.read-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.tbtn-1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.tbtn-1:hover {
+  background-color: #0069d9;
+}
+
+  </style>
+
+  <body>
+    <!-- nav starts -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      
+      <div class="container">
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="head-cont">
-            <a
-              class="nav-link active home"
-              aria-current="page"
-              href="./pages/sign.html"
-              >Home</a
+        <!-- header -->
+
+        <div
+          class="collapse navbar-collapse header"
+          id="navbarSupportedContent"
+        >
+          <div class="head-logo">
+            <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
+          </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="navbar-brand" href="main.html">Home</a>
+            </li> -->
+            <li class="nav-item head_btn">
+              <a class="navbar-brand" href="mybooks.html">My books</a>
+            </li>
+         
+            <!-- <li class="nav-item head_btn">
+              <a class="navbar-brand" href="sugges.html">suggestions</a>
+            </li> -->
+            
+         
+            <li class="nav-item dropdown head_btn">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                Browse                                   
             >
-            <a class="nav-link about" href="./pages/aboutus.html">About</a>
-            <a class="nav-link contact" href="./pages/contactus.html"
-              >Contact</a
-            >
+            LIST
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="">Trending books</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="./pages/sugges.html">suggestions</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./pages/buybooks.html">Buy books</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="./pages/rack.html">Rack library</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./pages/musics.html">Music</a>
+                </li>
+              </ul>
+            </li>    
+          </ul>      
+       
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+          <li class="nav-item head_btn">
+            <a class="navbar-brand" href="./pages/login.html">log in </a>
+          </li>
+          <li class="nav-item head_btn">
+            <a class="navbar-brand" href="./pages/sign.html">sign up</a>
+          </li>
+
+
+          <div class="flex-shrink-0 ">
+            <img src="./../assets/images/Screenshot 2023-04-04 135236.png"
+              alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
+              style="width:50px;">
+
+            
+        </div>
+      </div>
+      
+    </nav>
+    <!-- nav ends -->
+
+    <div class="c-1">
+      <div class="section-1">
+     
+        <img class="sec-1img" src="./../assets/images/Untitled design.png" />
+        <div class="sec1_content">
+          <p class="sec1_para">Try the virtual Liraray Explorer</p>
+          <div> <a class="library_btn" href="./pages/rack.html">LIBRARY</a></div>
           </div>
         </div>
       </div>
-    </nav>
-    <!-- section starts -->
-    <div class="section-2 container">
-      <img
-        class="img-1 img-fluid"
-        src="./assets/images/duimg-2homepage.png"
-        alt="livre"
-      />
-      <p class="para-1">
-        A writer only begins a book. A reader finishes it.
-        <!-- <span class="a-name"> -SAMUEL JONSON </span> -->
-      </p>
-    </div>
+      <hr />
+      <div class="section-2">
+        <p>What we believe in</p>
 
-    <div class="section-3">
-      <p id="hello" class="para-2">
-        "There is No Friend As Loyal as a Book."
-        <a href="./pages/main.html">
-          <button class="btn-1">LET'S START READING</button></a
-        >
-      </p>
-    </div>
-    <div class="section-4">
-      <div class="list-1">
-        <h4>about</h4>
-
-        <a href="#">mind free</a><br />
-        <a href="#"> useful for students</a><br />
-        <a href="#">relax</a><br />
-        <a href="#">dreamful</a><br />
-        <a href="#">motivation</a><br />
-        <a href="#">brave</a><br />
-        <a href="#">mental health</a><br />
-      </div>
-      <div class="list-1">
-        <h4>supports</h4>
-        <a href="#">books</a><br />
-        <a href="#">comics</a><br />
-        <a href="#">stories</a><br />
-        <a href="#">thoughtful</a><br />
-        <a href="#">emotional</a><br />
-        <a href="#">reality</a><br />
-        <a href="#">history</a><br />
-      </div>
-      <div class="list-1">
-        <h4>list</h4>
-        <a href="#">kids</a><br />
-        <a href="#">romantic</a><br />
-        <a href="#">classic</a><br />
-        <a href="#">trend</a><br />
-        <a href="#">triller</a><br />
-        <a href="#">textbooks</a><br />
-        <a href="#">buybooks</a><br />
+        <h1>
+          You can read all type of books here!<br />we hope you will love it.
+        </h1>
+        <a class="about-btn" href="./pages/aboutus.html">ABOUT US</a>
+        <!-- <button class="about-btn">ABOUT US</button> -->
       </div>
 
-      <div class="list-3">
-        <h1>Contact us with</h1>
-        <img class="fi" src="./assets/images/fb.jpg" alt="fb" />
-        <img class="fi" src="./assets/images/insta.webp" alt="insta" />
-      </div>
-    </div>
-    <!-- java script -->
+      <div class="sec-3">
+       <a href="./pages/addtrending_books.html">add trending book</a>
+     </div>
+
+     
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/index.js"></script>
+ 
+
+    <script>
+
+
+
+      
+
+
+
+let trendbox =[];
+
+let addtrend = JSON.parse(localStorage.getItem("trendfrom"));
+for(let i = 0 ; i < addtrend.length; i++){
+  trendbox.push(addtrend[i]);
+  console.log(addtrend);
+}
+
+//card//
+
+let div_card;
+let img_card;
+let a_card;
+let edit_card;
+
+
+for (let i = 0; i < trendbox.length; i++) {
+  //whole_card//
+  const card = trendbox[i]
+
+  div_card = document.createElement("div")
+  div_card.setAttribute("class", "card")
+  div_card.style.height = "3%";
+  // console.log(div_card)
+
+  // card-img //
+  img_card = document.createElement("img")
+  img_card.setAttribute("src", trendbox[i]["img"])
+  img_card.setAttribute("alt", trendbox[i]["alt"])
+  img_card.setAttribute("class", "card-img-top")
+  div_card.append(img_card)
+
+   //book name//
+   img_name = document.createElement("h2")
+   img_name.setAttribute("class", "card-title")
+   img_name.innerText = trendbox[i]["book_name"]
+   div_card.append(img_name)
+
+
+  //button-for-read//
+  div_read = document.createElement("div")
+  div_read.setAttribute("class", "read-box")
+  div_card.append(div_read)
+
+  //read//
+  a_card = document.createElement("a")
+  a_card.setAttribute("class", "tbtn-1")
+  a_card.setAttribute("href", trendbox[i]["bok_link"])
+  a_card.innerText = "Read"
+  div_read.append(a_card)
+
+  //edit
+  a_card = document.createElement("a")
+  a_card.setAttribute("class", "tbtn-1")
+  a_card.setAttribute("href","./pages/trendedit.html?id="+trendbox[i]["id"])
+  a_card.innerText = "EDIT"
+  div_read.append(a_card)
+
+  document.querySelector(".sec-3").append(div_card)
+}  
+// let addtrend = JSON.parse(localStorage.getItem("trendfrom"))
+
+
+
+
+// localStorage.setItem("trendfrom", JSON.stringify(trendbox));
+
+    </script>
   </body>
 </html>

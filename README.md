@@ -38,7 +38,7 @@ USER FLOW:https://drive.google.com/drive/folders/1jRsgGVSZeY-G7ZwEEq7-Q1EgWBA2h3
 
 WIRE FRAME:https://drive.google.com/drive/folders/1MujP56CQubAWrFWZ2Z-JkE4NBnzTmIFt
 
-
+SONARCLOUD:https://sonarcloud.io/project/overview?id=fssa-batch3_durgalakshmi.perumal__web_project
 
 books crud      -completed
 add books       -completed
@@ -56,4 +56,53 @@ rack crud- not completed
 
 
 
-SONARCLOUD:https://sonarcloud.io/project/overview?id=fssa-batch3_durgalakshmi.perumal__web_project
+BOOK READER AND BUYER  
+ 
+ Create an account
+ * Scenario 1: Successfully create an account 
+ -steps:
+  a. Navigate to the registration page.
+  b.Enter the required information such as email and password.
+  c. Click the "create account" button.
+
+  EXPECTED RESULT:
+  * The user is redirected to the login page.
+
+  create account through login
+ * 
+
+
+
+View books
+* Scenario 1: Successfully view books
+-Steps:
+a.View the list of available books.
+Expected Result:
+* The user can view the list of available books.
+
+Buy a book
+* Scenario 1: Successfully purchase a book
+Steps:
+a.Select a book .
+b.Click the "Buy Now" button.
+c. view the price details.
+d.Confirm the shipping address and payment method.
+e.Click the "Place Order" button.
+Expected Result:
+* The user is redirected to the order confirmation page.
+* An order confirmation email is sent to the user's email address.
+* The book stock is reduced by the purchased quantity.
+
+read books
+* Scenario 1:successfully read a book
+Steps:
+a.select the category the reader wants to read. 
+b.choose the book.
+c. click the "read" button.
+d. Then the user can find the corresponding pfd of the book 
+ Expected result:
+ * the user can find the pdf of the book they needed.
+
+
+
+
