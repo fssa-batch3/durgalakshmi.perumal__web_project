@@ -26,13 +26,26 @@
         <!-- div 2 -->
         <div>
           <label for="text" class="form-label">Name</label>
-          <input  id="buy_para" type="text" class="form-control" required />
+          <input  id="buy_bookname" type="text" class="form-control" required />
         </div>
         <br>
         <div>
           <label for="text" class="form-label">price</label>
-          <input  id="alt" type="text" class="form-control" required />
+          <input  id="book_price" type="text" class="form-control" required />
         </div>
+        <br>
+        <label for="section" class="form-label">Section </label>
+        <select id="books" class="form-control" required>
+          <option value=""></option>
+          <option value="adventure">adventure</option>
+          <option value="triller">triller</option>
+          <option value="romantic">romantic</option>
+          <option value="comedy">comedy</option>
+          <option value="classic">classic</option>
+          <option value="horror">horror</option>
+          <option value="devotional">devotional</option>
+
+        </select>
         
 
         <br />
@@ -42,89 +55,49 @@
       </div>
     </form>
 <script>
-//     const addbooks = document.getElementById("formtoaddbuybooks") 
-//     addbooks.addEventListener("submit",function(event){
-//       event.preventDefault();
 
-//       let id = Date.now();
-//       let bokimg = document.getElementById("book_img").value;
-//       let bookname = document.getElementById("book_name").value;
-//       let bookprice = document.getElementById("book_price").value;
-
-//     // console.log("1")
-//     let newbookstobuy = {
-//      "id" : id,
-//      "book_img" : bokimg,
-//      "book_name" :bookname,
-//      "bookprice" :bookprice,   };
-// //  console.log("4");
-//     let array = JSON.parse(localStorage.getItem("formtoaddbuybooks"))
-//     console.log(array);
-
-//     if(localStorage.getItem("formtoaddbuybooks") !=null){
-//       array = JSON.parse(localStorage.getItem("formtoaddbuybooks"))
-//     }
-//     array.push(newbookstobuy);
-//      console.log(newbookstobuy);
-
-     
-//      localStorage.setItem("formtoaddbuybooks", JSON.stringify(array));
-//        alert("successfully added")
-//     })
-
-// const addbooks = document.getElementById("formtoaddbuybooks"); 
-// addbooks.addEventListener("submit", function(event) {
-//   event.preventDefault();
-
-//   let id = Date.now();
-//   let bookimg = document.getElementById("book_img").value;
-//   let bookname = document.getElementById("book_name").value;
-//   let bookprice = document.getElementById("book_price").value;
-
-//   let newbookstobuy = {
-//     "id": id,
-//     "book_img": bookimg,
-//     "book_name": bookname,
-//     "book_price": bookprice,
-//   };
-
-
-//   let array = JSON.parse(localStorage.getItem("formtoaddbuybooks"))||;
-//   if(localStorage.getItem("newbookstobuy") != null){
-//         array =  JSON.parse(localStorage.getItem("newbookstobuy"))
-//         array.push(formtoaddbuybooks);
-//     }
-   
-  
-//   localStorage.setItem("formtoaddbuybooks", JSON.stringify(array));
-//   alert("Successfully added.");
-// });
 
 const addbooks = document.getElementById("formtoaddbuybooks"); 
 addbooks.addEventListener("submit", function(event) {
   event.preventDefault();
 
   let id = Date.now();
-  let bookimg = document.getElementById("book_img").value;
-  let bookname = document.getElementById("book_name").value;
+  let bookimg = document.getElementById("buybook_img").value;
+  let bookname = document.getElementById("buy_bookname").value;
   let bookprice = document.getElementById("book_price").value;
-
+  let book_type = document.getElementById("books").value;
   let newbookstobuy = {
     "id": id,
     "book_img": bookimg,
     "book_name": bookname,
     "book_price": bookprice,
+    "section":book_type
   };
 
-  let array = JSON.parse(localStorage.getItem("formtoaddbuybooks")) ;
+  let array = JSON.parse(localStorage.getItem("formtoaddbuybooks")) 
 
-  if(localStorage.getItem("formtoaddbuybooks") != null){
-    array =  JSON.parse(localStorage.getItem("formtoaddbuybooks"));
-    array.push(newbookstobuy);
-  }
   
-  localStorage.setItem("formtoaddbuybooks", JSON.stringify(array));
-  alert("Successfully added.");
-});
+createProduct(newbookstobuy,array,"formtoaddbuybooks")
+
+
+
+function createProduct(object, arr, LS_array) {
+  if (localStorage.getItem(LS_array) !== null) {
+    arr = JSON.parse(localStorage.getItem(LS_array));
+  }
+  arr.push(object);
+  localStorage.setItem(LS_array, JSON.stringify(arr));
+  alert("Product successfully added");
+  window.location.href = "./buybooks.html";
+}
+
+
+
+})
+
+
+
  
 </script>
+</body>
+</html>

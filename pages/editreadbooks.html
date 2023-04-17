@@ -42,11 +42,12 @@
           <button class="btn btn-danger" id="btn-delete" type="delete">Delete</button>
         </div>
       </div>
+      <a href="./readbooks.html"></a>
     </form>
     <script>
 
     //  get array from localstorage
-      let box = JSON.parse(localStorage.getItem("form"));
+      let box = JSON.parse(localStorage.getItem("readbooks"));
       // console.log(box);
 
       //url params
@@ -94,11 +95,11 @@ console.log(checked_obj);
 // let index = box.indexOf(edit_obj);
 //  console.log(index);
 
-localStorage.setItem("form",JSON.stringify(box))
+localStorage.setItem("readbooks",JSON.stringify(box))
 
 alert("Successfully changed")
-45348
-window.location.href = "./trend.html";
+
+window.location.href = "./readbooks.html";
 
 })
 
@@ -113,8 +114,8 @@ delete_card.addEventListener("click", function (event) {
             else{
               box.splice(Index, 1);
                 console.log(box);
-                localStorage.setItem("form", JSON.stringify(box))
-                window.location.href = "./trend.html";
+                localStorage.setItem("readbooks", JSON.stringify(box))
+                window.location.href = "./readbooks.html";
             }
            
         })

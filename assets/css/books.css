@@ -2,7 +2,7 @@
   display: inline-block;
 }
 
-.box-1 {
+/* .box-1 {
   background-color: #122f47;
   gap: 500px;
   height: 440px;
@@ -52,7 +52,7 @@ body {
 hr {
   margin-left: 20px;
   margin-right: 20px;
-  /* border: #e2dce8; */
+  border: #e2dce8; */
 }
 .c-1 {
   display: grid;
@@ -65,4 +65,7 @@ hr {
 
 .box-1 {
   box-shadow: 20px 20px 50px rgb(10, 10, 10);
+}
+body {
+  background-color: #abbece;
 }

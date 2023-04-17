@@ -109,6 +109,7 @@ a:hover {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-left:10px;
 }
 
 .product .desc button:hover {
@@ -219,24 +220,56 @@ a:hover {
   </nav>
 
 
-       <div class="section-body">
-            <div class="vertical-nav">
-                <ul>
-                   
-                    <li><a href="#Adventure">Adventure</a></li>
-                    <li><a href="#Thriller">Thriller</a></li>
-                    <li><a href="#Romantic">Romantic</a></li>
-                    <li><a href="#Comedy">Comedy</a></li>
-                    <li class="back_btn"> <a href="#">back</a></li>
-                </ul>
-               
-            </div> 
+      
+            <div class="section-body">
+              <div class="vertical-nav">
+                  <ul>
+                     
+                      <li><a href="#Adventure">Adventure</a></li>
+                      <li><a href="#Thriller">Thriller</a></li>
+                      <li><a href="#Romantic">Romantic</a></li>
+                      <li><a href="#Comedy">Comedy</a></li>
+                      <li><a href="#classic">classic</a></li>
+                      <li><a href="#horror">horror</a></li>
+                      <li><a href="#devotional">devotional</a></li>
+                      <li><a href="./addbuybooks.html">add books</a></li>
+                      <li class="back_btn"> <a href="#">back</a></li>
+                  </ul>
+                 
+              </div>
+               <div><h4>adventure </h4></div>
+                <div id="adventure" class="buydiv container"></div>
+                <br>
 
-            <div class="gallery-main" style="margin-left:25%;padding:1px 16px;height:1000px;">
+                <div><h4>triller</h4></div>
+                <div id="thriller" class="buydiv container"></div>
+                <br>
+
+                <div><h4>romantic</h4></div>
+                <div id="romantic" class="buydiv"></div>
+                <br>
+
+                <div><h4>comedy</h4></div>
+                <div id="comedy" class="buydiv"></div>
+                <br>
+
+                <div><h4>classic</h4></div>
+                <div id="classic" class="buydiv"></div>
+                <br>
+
+                <div><h4>horror</h4></div>
+                <div id="horror" class="buydiv"></div>
+                <br>
+
+                <div><h4>devotional</h4></div>
+                <div id="devotional" class="buydiv"></div>
+  
+
+            <!-- <div class="gallery-main" style="margin-left:25%;padding:1px 16px;height:1000px;">
                 <div class="Adventure" id="Adventure">
-                    <h2>Adventure</h2>
+                    <h2>Adventure</h2> -->
 
-                    <div class="product">
+                    <!-- <div class="product">
                     
                         <img src="./../assets/images/SPARKE BOK.jpeg" alt="img-1">
                     
@@ -247,146 +280,172 @@ a:hover {
                         <button class="buy_btn">Buy</button>
                 
                        </div>
-               </div>
+               </div> -->
                 
         
                                 
-                            
-                </div>
-            </div>
-
-            <br>
-
-           
-              
-
-        </div>
+          
 
 
     </body>
     <script>
-//           let buybox=[]
-  
-
-//               localStorage.setItem("formtoaddbuybooks", JSON.stringify(buybox));
-// console.log("1");
-  
-//     let bookimg;
-//     let price;
-//     let addcart;
-//     let buy_btn;
-//     let edit_btn;
-
-//     let  addbuybooks = JSON.parse(localStorage.getItem("formtoaddbuybooks"))
-//     console.log("2");
-    
-//     for(let i=0 ;i<addbuybooks.length;i++){
-//       buybox.push(addbuybooks[i]);
-//       console.log("3");
-
-//     }
-//     for(let i = 0;i < buybox.length;i++){
-//       const card = buybox[i];
 
 
-// // Create the product container
-// const productContainer = document.createElement('div');
-// productContainer.classList.add('product');
 
-// // Create the product image
-// const productImage = document.createElement('img');
-// productImage.setAttribute("src",buybox[i]["book_img"])
-// productImage.alt = 'img-1';
-
-// // Create the product description container
-// const productDescContainer = document.createElement('div');
-// productDescContainer.classList.add('desc');
-
-// // Create the price text
-// const book_name = document.createTextNode(buybox[i]["book_name"])
-// const priceText = document.createTextNode(buybox[i]["book_price"]);
-
-// // Create the shopping cart icon
-// const shoppingCartIcon = document.createElement('i');
-// shoppingCartIcon.classList.add('fa', 'fa-shopping-cart');
-// shoppingCartIcon.setAttribute('aria-hidden', 'true');
-
-// // Create the buy button
-// const buyButton = document.createElement('button');
-// buyButton.classList.add('buy_btn');
-// buyButton.textContent = 'Buy';
-
-// // Add the price text, shopping cart icon, and buy button to the product description container
-// productDescContainer.appendChild(book_name);
-// productDescContainer.appendChild(document.createElement('br'));
-// productDescContainer.appendChild(priceText);
-// productDescContainer.appendChild(document.createElement('br'));
-// productDescContainer.appendChild(shoppingCartIcon);
-// productDescContainer.appendChild(buyButton);
-
-// // Add the product image and product description container to the product container
-// productContainer.appendChild(productImage);
-// productContainer.appendChild(productDescContainer);
-
-// // Add the product container to the document
-// document.body.appendChild(productContainer);}
-
-const container = document.getElementById('product-container');
+// const container = document.getElementById('product-container');
 
 // Retrieve the array of books from localStorage
-const books = JSON.parse(localStorage.getItem('formtoaddbuybooks')) || [];
+const adventure_buy_boks = JSON.parse(localStorage.getItem("formtoaddbuybooks")) ;
+
+function buybooklist(ar,selector){
+  let productContainer;
+  let productImage;
+  let productDescContainer;
+  let bookNameText;
+  let priceText;
+  let shoppingCartIcon;
+  let buyButton;
+
+
+
+
 
 // Loop through the books and create a product card for each one
-for (let i = 0; i < books.length; i++) {
-  const book = books[i];
+for (let i = 0; i < ar.length; i++) {
+  const book = ar[i];
 
   // Create the product container
-  const productContainer = document.createElement('div');
-  productContainer.classList.add('product');
+  const productContainer = document.createElement("div");
+  productContainer.classList.add("product");
 
   // Create the product image
-  const productImage = document.createElement('img');
-  productImage.setAttribute('src', book['book_img']);
-  productImage.alt = 'book-image';
+  const productImage = document.createElement("img");
+  productImage.setAttribute("src", ar[i]["book_img"]);
+  productImage.alt = "book_image";
 
   // Create the product description container
-  const productDescContainer = document.createElement('div');
-  productDescContainer.classList.add('desc');
+  const productDescContainer = document.createElement("div");
+  productDescContainer.classList.add("desc");
 
   // Create the book name text node
-  const bookNameText = document.createTextNode(book['book_name']);
+  const bookNameText = document.createTextNode(ar[i]["book_name"]);
 
   // Create the price text node
-  const priceText = document.createTextNode(book['book_price']);
+  const priceText = document.createTextNode(ar[i]["book_price"]);
 
   // Create the shopping cart icon
-  const shoppingCartIcon = document.createElement('i');
-  shoppingCartIcon.classList.add('fa', 'fa-shopping-cart');
-  shoppingCartIcon.setAttribute('aria-hidden', 'true');
+  // const shoppingCartIcon = document.createElement("i");
+  // shoppingCartIcon.classList.add("fa", "fa_shopping_cart");
+  // shoppingCartIcon.setAttribute("aria_hidden", "true");
 
   // Create the buy button
-  const buyButton = document.createElement('button');
-  buyButton.classList.add('buy_btn');
-  buyButton.textContent = 'Buy';
+  const buyButton = document.createElement("button");
+  buyButton.classList.add("buy_btn");
+  buyButton.textContent = "Buy";
+
+
+
+  editButton = document.createElement("button");
+editButton.classList.add("edit_btn");
+editButton.textContent = "Edit";
+editButton.setAttribute("href", "./../pages/edititem.html?id=" + ar[i]["id"]);
 
   // Add the book name text, price text, shopping cart icon, and buy button to the product description container
-  productDescContainer.appendChild(bookNameText);
-  productDescContainer.appendChild(document.createElement('br'));
-  productDescContainer.appendChild(priceText);
-  productDescContainer.appendChild(document.createElement('br'));
-  productDescContainer.appendChild(shoppingCartIcon);
-  productDescContainer.appendChild(buyButton);
+  productDescContainer.append(bookNameText);
+  productDescContainer.append(document.createElement('br'));
+  productDescContainer.append(priceText);
+  productDescContainer.append(document.createElement('br'));
+  // productDescContainer.append(shoppingCartIcon);
+  productDescContainer.append(buyButton);
+  productDescContainer.append(editButton);
+
 
   // Add the product image and product description container to the product container
-  productContainer.appendChild(productImage);
-  productContainer.appendChild(productDescContainer);
+  productContainer.append(productImage);
+  productContainer.append(productDescContainer);
 
   // Add the product container to the container element
-  container.appendChild(productContainer);
-}
+  // container.append(body);
 
-// Log a message after the loop has completed
-console.log('Finished generating product cards.');
+
+  
+  document.querySelector(selector).append(productContainer)
+}
+}
+function productAppend(type) {
+    const productsection = adventure_buy_boks.filter((h) => h.section === type);
+    return productsection;
+  }
+     // adventure
+     const create_buyadventure_book = [];
+  for (let i = 0; i < productAppend("adventure").length; i++) {
+    create_buyadventure_book.push(productAppend("adventure")[i]);
+    console.log(create_buyadventure_book);
+  }
+  buybooklist(create_buyadventure_book, "#adventure");
+  
+
+    // triller
+    let thriller_div_card;
+
+    const create_buytriller_book = [];
+    for(let i = 0; i < productAppend("triller").length;i++){
+      create_buytriller_book.push(productAppend("triller")[i]);
+      console.log(create_buytriller_book);
+   }
+  buybooklist(create_buytriller_book, "#thriller");
+
+
+// romantic
+    let romantic__div_card;
+
+    const create_buyromantic_book = [];
+    for(let i = 0; i < productAppend("romantic").length;i++){
+      create_buyromantic_book.push(productAppend("romantic")[i]);
+   }
+   buybooklist(create_buyromantic_book,"#romantic");
+  
+   
+    // comedy
+    let comedy_div_card;
+ 
+    const create_buycomedy_book = [];
+    for(let i = 0; i < productAppend("comedy").length;i++){
+      create_buycomedy_book.push(productAppend("comedy")[i]);
+   }
+   buybooklist(create_buycomedy_book,"#comedy");
+
+    // classic
+    let classic_div_card;
+
+    const create_buyclassic_book = [];
+    for(let i = 0; i < productAppend("classic").length;i++){
+      create_buyclassic_book.push(productAppend("classic")[i]);
+   }
+   buybooklist(create_buyclassic_book,"#classic");
+
+
+    // horror
+    let horror_div_card;
+
+    const create_buyhorror_book = [];
+    for(let i = 0; i < productAppend("horror").length;i++){
+      create_buyhorror_book.push(productAppend("horror")[i]);
+   }
+   buybooklist(create_buyhorror_book,"#horror");
+
+    // devotional
+    let devotional_div_card;
+
+    const create_buydevotional_book = [];
+    for(let i = 0; i < productAppend("devotional").length;i++){
+      create_buydevotional_book.push(productAppend("devotional")[i]);
+   }
+   buybooklist(create_buydevotional_book,"#devotional");
+
+
+  
+
     </script>
 
 </html>
