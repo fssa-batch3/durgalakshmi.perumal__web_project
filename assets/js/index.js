@@ -1,7 +1,7 @@
 const musicbox = [
-    { img: "./../assets/images/sbook-1.png", audio: "./../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3" },
-    { img: "./../assets/images/sbook-1.png", audio: './../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3' },
-    { img: "./../assests/images/sbook-1.png", audio: './../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3' }
+    { img: "./../assets/images/sbook-1.png", audio: "./../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3",id: "12"},
+    { img: "./../assets/images/sbook-1.png", audio: './../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3',id: "13" },
+    { img: "./../assests/images/sbook-1.png", audio: './../assets/vedios/peaceful-garden-healing-light-piano-for-meditation-zen-landscapes-112199.mp3',id: "14" }
   ];  
 
   localStorage.setItem("music-card", JSON.stringify(musicbox));
@@ -234,6 +234,80 @@ const musicbox = [
   ]
   localStorage.setItem("readbooks",JSON.stringify(booktoread));
   ;
+  
+  const trendbooks =[
+
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    },
+    {
+      id:"21",
+      img:"./../assets/images/devotional3.jpeg",
+      book_name:"the trend",
+      bok_link:"./../assets/images/durga.pdf"
+    }
+  ]
+  localStorage.setItem("trendfrom",JSON.stringify(trendbooks));
+
+
+
 
 
   const booktobuy = [

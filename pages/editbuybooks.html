@@ -48,82 +48,79 @@
   
           <br />
           <div class="d-grid d-md-block container">
-            <button class="btn btn-success" type="submit">Submit</button>
+            <button class="btn btn-success" id="btn-change" type="submit">change</button>
+          </div>
+          <br>
+          <div class="d-grid d-md-block container">
+            <button class="btn btn-danger" id="btn-delete" type="delete">Delete</button>
           </div>
         </div>
       </form>
     <script>
 
-    //  get array from localstorage
-      let box = JSON.parse(localStorage.getItem("formtoaddbuybooks"));
-      // console.log(box);
 
-      //url params
+
+let box = JSON.parse(localStorage.getItem("formtoaddbuybooks"));
+
 const url = window.location.search;
 const url_params = new URLSearchParams(url)
 const get_id = url_params.get("id");
 
-console.log(get_id);
 let pro_obj = box.find(function(product){
-let check_id = product["id"];
-if( check_id == get_id){
-  return true;
-}
-})
-// console.log(pro_obj);
+  let check_id = product["id"];
+  if (check_id == get_id) {
+    return true;
+  }
+});
 
-  let bookimg = document.getElementById("buybook_img");
-  let bookname = document.getElementById("buy_bookname");
-  let bookprice = document.getElementById("book_price");
+let bookimg = document.getElementById("buybook_img");
+let bookname = document.getElementById("buy_bookname");
+let bookprice = document.getElementById("book_price");
+let book_type = document.getElementById("books");
 
-  bookimg.value = pro_obj["buybook_img"]
-  bookname.value = pro_obj["buy_bookname"]
-  bookprice.value = pro_obj["book_price"]
 
-// For Edit
-let form = document.getElementById("update_form")
+bookimg.value = pro_obj["book_img"];
+bookname.value = pro_obj["book_name"];
+bookprice.value = pro_obj["book_price"];
+book_type.value = pro_obj["section"]
+
+let form = document.getElementById("editbuybooksfrom");
 form.addEventListener("submit", function(event){
   event.preventDefault();
   
-let image = document.getElementById("buybook_img").value;
-let name = document.getElementById("buy_bookname").value;
-let price = document.getElementById("book_price").value; 
+  let image = document.getElementById("buybook_img").value;
+  let name = document.getElementById("buy_bookname").value;
+  let price = document.getElementById("book_price").value; 
+  let book_type = document.getElementById("books").value;
 
-let edit_obj = {
-  img:image,
-  book_name:name,
-  bok_link:link,
-}
-// console.log(edit_obj);
+  let edit_obj = {
+    book_img: image,
+    book_name: name,
+    book_price: price,
+    section:book_type,
+  };
 
-// Assiging the objects
-let checked_obj = Object.assign(pro_obj, edit_obj)
-console.log(checked_obj);
+  let checked_obj = Object.assign(pro_obj, edit_obj);
 
-// let index = box.indexOf(edit_obj);
-//  console.log(index);
-
-localStorage.setItem("formtoaddbuybooks",JSON.stringify(box))
-
-alert("Successfully changed")
-
-window.location.href = "./buybooks.html";
-
-})
+  let index = box.indexOf(pro_obj)
+  console.log(index);
+  localStorage.setItem("formtoaddbuybooks", JSON.stringify(box));
+  alert("Successfully changed");
+  window.location.href = "./buybooks.html";
+});
 
 let delete_card = document.getElementById("btn-delete");
-delete_card.addEventListener("click", function (event) {
-            event.preventDefault()
-            let Index = box.indexOf(pro_obj)
-            let msg = confirm("Are you sure want to delete your account")
-            if (msg !== true) {
-            return
-            }
-            else{
-              box.splice(Index, 1);
-                console.log(box);
-                localStorage.setItem("readbooks", JSON.stringify(box))
-                window.location.href = "./readbooks.html";
-            }
-           
-        })
+delete_card.addEventListener("click", function(event) {
+  event.preventDefault();
+  let Index = box.indexOf(pro_obj);
+  let msg = confirm("Are you sure you want to delete this item?");
+  if (msg !== true) {
+    return;
+  } else {
+    box.splice(Index, 1);
+    localStorage.setItem("formtoaddbuybooks", JSON.stringify(box));
+    window.location.href = "./buybooks.html";
+  }
+});
+
+        </script>

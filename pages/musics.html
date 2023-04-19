@@ -164,6 +164,12 @@ audio.setAttribute("class", "audio");
 audio.setAttribute("src", musicbox[i].audio);
 audio.setAttribute("controls", "");
 div_songbox.append(audio);
+//edit btn
+edit_music = document.createElement("a")
+edit_music.setAttribute("class", "tbtn-1")
+edit_music.setAttribute("href","./editmusic.html?id="+musicbox[i]["id"])
+edit_music.innerText = "EDIT"
+div_songbox.append(edit_music)
 
  
 

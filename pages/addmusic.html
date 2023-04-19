@@ -45,10 +45,12 @@ const musicForm = document.getElementById("music-form");
 
 musicForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
+  let id = Date.now();
   const audio_img = document.getElementById("img").value;
   const audio = document.getElementById("audio").value;
+  
   let newproduct = {
+    "id" : id,
     "img": audio_img,
     "audio": audio,
   };
@@ -69,14 +71,6 @@ musicForm.addEventListener("submit", (event) => {
   window.location.href = "./musics.html";
 });
 
-// let array = JSON.parse(localStorage.getItem("music-form"));
-
-  // // Checking if the array is null or not
-  // if(array != null){
-  //   array.push(newProduct);
-  // } else {
-  //   array = [newProduct];
-  // }
 
 
     

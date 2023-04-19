@@ -283,7 +283,7 @@ a:hover {
                </div> -->
                 
         
-                                
+                
           
 
 
@@ -343,12 +343,16 @@ for (let i = 0; i < ar.length; i++) {
   buyButton.classList.add("buy_btn");
   buyButton.textContent = "Buy";
 
+ const editButton = document.createElement("a");
+ editButton.setAttribute("class", "edit_btn btn btn-primary")
+ editButton.setAttribute("href", "../pages/editbuybooks.html?id=" + ar[i]["id"])
+ editButton.innerText = "Edit"
+ productDescContainer.append(editButton)
 
-
-  editButton = document.createElement("button");
-editButton.classList.add("edit_btn");
-editButton.textContent = "Edit";
-editButton.setAttribute("href", "./../pages/edititem.html?id=" + ar[i]["id"]);
+//   editButton = document.createElement("a");
+// editButton.classList.add("edit_btn");
+// editButton.textContent = "Edit";
+// editButton.setAttribute("href", );
 
   // Add the book name text, price text, shopping cart icon, and buy button to the product description container
   productDescContainer.append(bookNameText);
