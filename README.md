@@ -136,3 +136,68 @@ d. Then the user can listen the songs
  Expected result:
  * the user can lestern the songs
 
+
+Login as admin
+ 
+Scenario 1: successfully logined as admin.
+Steps:
+Step a: enter the correct  email for login
+Step b: enter the correct password 
+
+
+Expected result: the admin is redirected to the home page
+
+Trending books
+ 
+Scenario 1 : successful ,create edit and delete trending book list.
+Steps :
+Step a : click the add books button - create new trending books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Read books
+ 
+Scenario 1 : successful ,create edit and delete read book list.
+
+Steps :
+Step a : click the add books button - create new read  books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Buy books
+ 
+Scenario 1 : successful ,create edit and delete read book list.
+
+Steps :
+Step a : click the add books button - create new buy  books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Songs
+ 
+Scenario 1 : successful ,create edit and delete song list.
+
+Steps :
+Step a : click the add books button - create new songs.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the song.
+
+Expected result:
+The admin can create ,edit and delete songs.
