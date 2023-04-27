@@ -7,63 +7,17 @@
     <title>Document</title>
     <link
     rel="stylesheet"
+    href="../assets/css/books.css"
+  />
+    <link
+    rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
   />
 </head>
 
-  <style>
-
-    .sec-3{
-      display: flex;
-
-    margin-top:100px;
-    }
-    .card {
-   height:300px;
-  width: 200px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-
-.card-title {
-  margin: 10px;
-  font-size: 1.5rem;
-}
-
-.read-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.tbtn-1 {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.tbtn-1:hover {
-  background-color: #0069d9;
-}
-
-  </style>
 
   <body>
     <!-- nav starts -->
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       
       <div class="container">
@@ -78,7 +32,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- header -->
+        <!--header-->
 
         <div
           class="collapse navbar-collapse header"
@@ -88,27 +42,22 @@
             <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="navbar-brand" href="main.html">Home</a>
-            </li> -->
+            </li>-->
             <li class="nav-item head_btn">
               <a class="navbar-brand" href="mybooks.html">My books</a>
             </li>
          
-            <!-- <li class="nav-item head_btn">
+            <!--<li class="nav-item head_btn">
               <a class="navbar-brand" href="sugges.html">suggestions</a>
-            </li> -->
+            </li>-->
             
          
             <li class="nav-item dropdown head_btn">
-              <a
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                Browse                                   
-            >
-            LIST
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+              </a>
               <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="./pages/trendbooks.html">Trending books</a>
@@ -116,14 +65,12 @@
                 <li>
                   <a class="dropdown-item" href="./pages/readbooks.html">readbooks</a>
                 </li>
-
                 <li>
                   <a class="dropdown-item" href="./pages/sugges.html">suggestions</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="./pages/buybooks.html">Buy books</a>
                 </li>
-
                 <li>
                   <a class="dropdown-item" href="./pages/rack.html">Rack library</a>
                 </li>
@@ -131,8 +78,8 @@
                   <a class="dropdown-item" href="./pages/musics.html">Music</a>
                 </li>
               </ul>
-            </li>    
-          </ul>      
+            </li>
+               
        
 
           <form class="d-flex" role="search">
@@ -155,85 +102,21 @@
 
 
           <div class="flex-shrink-0 ">
+            <a href="./pages/profile.html">
             <img src="./../assets/images/Screenshot 2023-04-04 135236.png"
               alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
-              style="width:50px;">
+              style="width:50px;"></a>
 
             
         </div>
       </div>
       
     </nav>
-    <div class="sec-3"></div>
-    
-</body>
-<script>let trendbox =[];
+   
+    <div class="trend_div"></div>
 
-    let addtrend = JSON.parse(localStorage.getItem("trendfrom"));
-    
-    for(let i = 0 ; i < addtrend.length; i++){
-      trendbox.push(addtrend[i]);
-      console.log(addtrend);
-    }
-    
-    //card//
-    
-    let div_card;
-    let img_card;
-    let a_card;
-    let edit_card;
-    
-    
-    for (let i = 0; i < trendbox.length; i++) {
-      //whole_card//
-      const card = trendbox[i]
-    
-      div_card = document.createElement("div")
-      div_card.setAttribute("class", "card")
-      div_card.style.height = "3%";
-      // console.log(div_card)
-    
-      // card-img //
-      img_card = document.createElement("img")
-      img_card.setAttribute("src", trendbox[i]["img"])
-      img_card.setAttribute("alt", trendbox[i]["alt"])
-      img_card.setAttribute("class", "card-img-top")
-      div_card.append(img_card)
-    
-       //book name//
-       img_name = document.createElement("h2")
-       img_name.setAttribute("class", "card-title")
-       img_name.innerText = trendbox[i]["book_name"]
-       div_card.append(img_name)
-    
-    
-      //button-for-read//
-      div_read = document.createElement("div")
-      div_read.setAttribute("class", "read-box")
-      div_card.append(div_read)
-    
-      //read//
-      a_card = document.createElement("a")
-      a_card.setAttribute("class", "tbtn-1")
-      a_card.setAttribute("href", trendbox[i]["bok_link"])
-      a_card.innerText = "Read"
-      div_read.append(a_card)
-    
-      //edit
-      a_card = document.createElement("a")
-      a_card.setAttribute("class", "tbtn-1")
-      a_card.setAttribute("href","./pages/trendedit.html?id="+trendbox[i]["id"])
-      a_card.innerText = "EDIT"
-      div_read.append(a_card)
-    
-      document.querySelector(".sec-3").append(div_card)
-    }  
-    // let addtrend = JSON.parse(localStorage.getItem("trendfrom"))
-    
-    
-    
-    
-    localStorage.setItem("trendfrom", JSON.stringify(trendbox));
-    </script>
+    <script src="../assets/js/trendbook.js"></script>
+</body>
+
 
 </html>

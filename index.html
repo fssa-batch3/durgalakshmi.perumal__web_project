@@ -62,11 +62,54 @@
 .tbtn-1:hover {
   background-color: #0069d9;
 }
+.newsletter {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.newsletter h3 {
+  flex-basis: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.newsletter input[type="email"] {
+  flex-basis: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter input[type="email"]::placeholder {
+  color: #999;
+}
+
+.newsletter input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter input[type="submit"]:hover {
+  background-color: #0056b3;
+}
 
   </style>
 
   <body>
-    <!-- nav starts -->
+    <!--nav starts-->
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       
@@ -82,7 +125,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- header -->
+        <!--header-->
 
         <div
           class="collapse navbar-collapse header"
@@ -92,16 +135,16 @@
             <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- <li class="nav-item">
+            <!--<li class="nav-item">
               <a class="navbar-brand" href="main.html">Home</a>
-            </li> -->
+            </li>-->
             <li class="nav-item head_btn">
               <a class="navbar-brand" href="mybooks.html">My books</a>
             </li>
          
-            <!-- <li class="nav-item head_btn">
+            <!--<li class="nav-item head_btn">
               <a class="navbar-brand" href="sugges.html">suggestions</a>
-            </li> -->
+            </li>-->
             
          
             <li class="nav-item dropdown head_btn">
@@ -159,21 +202,22 @@
 
 
           <div class="flex-shrink-0 ">
+            <a href="./pages/profile.html">
             <img src="./../assets/images/Screenshot 2023-04-04 135236.png"
               alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
-              style="width:50px;">
+              style="width:50px;"></a>
 
             
         </div>
       </div>
       
     </nav>
-    <!-- nav ends -->
+    <!--nav ends-->
 
     <div class="c-1">
       <div class="section-1">
      
-        <img class="sec-1img" src="./../assets/images/Untitled design.png" />
+        <img class="sec-1img" src="./../assets/images/Untitled design.png"/>
         <div class="sec1_content">
           <p class="sec1_para">Try the virtual Liraray Explorer</p>
           <div> <a class="library_btn" href="./pages/rack.html">LIBRARY</a></div>
@@ -189,7 +233,7 @@
         </h1>
         <a class="about-btn" href="./pages/aboutus.html">ABOUT US</a>
         </div>
-<!-- review -->
+<!--review-->
 <section class="newsletter">
 
   <form action="">
@@ -199,19 +243,7 @@
       <input type="submit" value="subcribe" class="btn">
   </form>
 </section>
-
-
-
-
-
-
-
-
-
-
-      <div class="sec-3">
-       <a href="./pages/addtrending_books.html">add trending book</a>
-     </div>
+   
 
      
     <script
@@ -221,16 +253,5 @@
     ></script>
     <script src="./assets/js/index.js"></script>
  
-
-    <script>
-
-
-
-      
-
-
-
-
-    </script>
-  </body>
+ </body>
 </html>

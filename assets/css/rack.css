@@ -86,14 +86,15 @@ body {
 }
 .head {
   background-color: white;
-  width: 100%;
+  width: 100;
   position: fixed;
-  z-index: 10;
+  z-index: 60;
+  margin-top: 110px;
 }
 .logo {
   height: 100px;
   /* margin-top: 10px; */
-  margin-left: 30px;
+  /* margin-left: 30px; */
   /* align-items: center; */
 }
 .head-logo {
@@ -212,7 +213,8 @@ body {
   display: flex;
   gap: 50px;
   scroll-snap-type: x mandatory;
-  overflow-x: auto;
+  overflow-x: scroll;
+
 }
 .vertical-scroll-b4::-webkit-scrollbar {
   display: none;
@@ -227,6 +229,7 @@ body {
 .simg-1 {
   height: 200px;
   width: 200px;
+  margin-left:10px;
 }
 .simg-2 {
   height: 200px;

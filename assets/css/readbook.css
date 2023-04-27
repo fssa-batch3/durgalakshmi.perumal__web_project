@@ -1,0 +1,90 @@
+ /* styles for the card container */
+ .box-1 {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+  }
+  
+  /* styles for the book image */
+  .tb-1 {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+  }
+  
+  /* styles for the book name */
+  .bok_name {
+    color: #333;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* styles for the horizontal rule */
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+  
+  /* styles for the read/edit buttons container */
+  .read-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* styles for the read/edit buttons */
+  .tbtn-1 {
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .tbtn-1:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* styles for the "EDIT" button */
+  .tbtn-1:nth-child(2) {
+    background-color: #28a745;
+  }
+  
+  .tbtn-1:nth-child(2):hover {
+    background-color: #1d923b;
+  }
+  
+  /* styles for the "READ" button */
+  .tbtn-1:nth-child(1) {
+    margin-right: 10px;
+  }
+  .readdiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20%;
+    gap:5%;
+    margin-top: 5%;
+   
+  }
+  .add_btn{
+    background-color: #f2f2f8;
+    color: #081451;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  

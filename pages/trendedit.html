@@ -43,13 +43,13 @@
         </div>
       </div>
     </form>
- <a href=""></a>
+
   
     <script>
 
     //  get array from localstorage
       let box = JSON.parse(localStorage.getItem("trendfrom"));
-      // console.log(box);
+      console.log(box);
 
       //url params
 const url = window.location.search;
@@ -100,7 +100,7 @@ localStorage.setItem("trendfrom",JSON.stringify(box))
 
 alert("Successfully changed")
 
-window.location.href = "../index.html";
+window.location.href = "../pages/trendbooks.html";
 
 })
 
@@ -116,7 +116,7 @@ delete_trendbok.addEventListener("click", function (event) {
               box.splice(Index, 1);
                 console.log(box);
                 localStorage.setItem("trendfrom", JSON.stringify(box))
-                window.location.href = "../index.html";
+                window.location.href = "../pages/trendbooks.html";
             }
          
         })

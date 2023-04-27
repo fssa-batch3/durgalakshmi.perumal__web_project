@@ -13,10 +13,10 @@
   />
   </head>
   <style>
-    /* Music box container */
+/* Style for the song box container */
 
 
-/* Audio player */
+
 
 
   </style>
@@ -118,7 +118,7 @@
     </nav>
   
   
-         <div class="section-body">
+         <!-- <div class="section-body">
               <div class="vertical-nav">
                   <ul>
                      
@@ -126,21 +126,25 @@
                       <li><a href="#Thriller">SAD</a></li>
                       <li><a href="#Romantic">TRILLER</a></li>
                       <li><a href="#Comedy">CRASY</a></li>
-                      <li><a href="./addmusic.html">add music</a></li>
+                      <li><a href="./addmusic.html">add music</a></li> -->
 
-                      <li class="back_btn"> <a href="#">back</a></li>
+                      <!-- <li class="back_btn"> <a href="#">back</a></li>
                   </ul>
                  
-              </div> 
+              </div>   -->
    
-    
+         
+    <div class="adddiv"></div>
     <script>
     
     
 
 const musicbox = JSON.parse(localStorage.getItem("music-card"));
+const admin_email = JSON.parse(localStorage.getItem("details"))
 console.log(musicbox);
 
+
+if(admin_email == "admindurga@gmail.com"){
 // Card
 let div_songbox;
 let img_piano;
@@ -175,6 +179,45 @@ div_songbox.append(edit_music)
 
   document.querySelector("body").append(div_songbox);
 }
+let create_a = document.createElement("a")
+create_a.setAttribute("href", "./addmusic.html");
+create_a.innerText ="add music";
+
+
+let create_btn = document.createElement("button");
+create_btn.setAttribute("class", "btn btn-primary") ;
+
+create_a.append("create_btn")
+
+document.querySelector(".adddiv").append(create_a)
+}
+else{
+  // Card
+let div_songbox;
+let img_piano;
+let audio;
+
+for (let i = 0; i < musicbox.length; i++) {
+  div_songbox = document.createElement("div");
+  div_songbox.setAttribute("class", "c-1");
+  // console.log(div_songbox);
+
+  // Piano img
+  img_piano = document.createElement("img");
+  img_piano.setAttribute("src", musicbox[i].img);
+  img_piano.setAttribute("alt", "song-img");
+  img_piano.setAttribute("class", "piano");
+  div_songbox.append(img_piano);
+
+  // Audio
+  audio = document.createElement("audio");
+audio.setAttribute("class", "audio");
+audio.setAttribute("src", musicbox[i].audio);
+audio.setAttribute("controls", "");
+div_songbox.append(audio);
+
+document.querySelector(".adddiv").append(div_songbox)
+}}
 localStorage.setItem("music-card", JSON.stringify(musicbox));
 
     </script>

@@ -7,10 +7,11 @@
 }
 .about {
   transition: transition;
+  color: white;
 }
 .about:hover {
-  color: #020609;
   transform: scale(1.2);
+  color: white;
 }
 .contact {
   transition: transition;

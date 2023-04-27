@@ -2,58 +2,7 @@
   display: inline-block;
 }
 
-/* .box-1 {
-  background-color: #122f47;
-  gap: 500px;
-  height: 440px;
-  width: 390px;
-  border-radius: 20px;
-}
-body {
-  background-color: #abbece;
-}
-.tre {
-  font-size: 60px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: #f0f3f5;
-}
-.tb-1 {
-  height: 250px;
-  margin-left: 80px;
-  margin-top: 30px;
-  width: 60%;
-}
-.bok_name {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #f0f3f5;
-  padding-left: 10%;
-}
-.tbtn-1 {
-  padding: 5%;
-  background-color: #7296b4;
-  color: #f4f7f9;
-  border: none;
-  border-radius: 15px;
-  margin-left: 100px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: transform 0.1s;
-  text-decoration: none;
-}
-.tbtn-1:hover {
-  background-color: white;
-  color: #194569;
-  transform: scale(1.3);
-}
-.read-box {
-  margin-top: 35px;
-}
-hr {
-  margin-left: 20px;
-  margin-right: 20px;
-  border: #e2dce8; */
-}
+
 .c-1 {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -68,4 +17,55 @@ hr {
 }
 body {
   background-color: #abbece;
+}
+.logo {
+  height: 130px;
+  margin-top: 10px;
+}
+    .trend_div{
+      display: grid;
+grid-template-columns:20% 20% 20% 20% 20%;
+    margin-top:100px;
+    }
+    .card {
+   height:300px;
+  width: 200px;
+  margin: 10px;
+  border: 1px solid rgb(254, 254, 254);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-title {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.read-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.tbtn-1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.tbtn-1:hover {
+  background-color: #0069d9;
 }
