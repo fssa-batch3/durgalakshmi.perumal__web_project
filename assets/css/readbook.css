@@ -87,4 +87,7 @@
     border-radius: 3px;
     cursor: pointer;
   }
-  
+/* .header{
+    position:absolute;
+    z-index: 2;
+} */

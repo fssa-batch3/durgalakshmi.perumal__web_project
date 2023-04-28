@@ -28,6 +28,8 @@
 }
 div.section-2 {
   text-align: center;
+  margin-top:2%;
+ 
 }
 .about-btn {
   background-color: #052138;
@@ -38,6 +40,7 @@ div.section-2 {
   cursor: pointer;
   transition: transform 0.1s;
   text-decoration: none;
+ 
 }
 .tbtn-1:hover {
   background-color: white;

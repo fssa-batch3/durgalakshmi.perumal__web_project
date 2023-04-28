@@ -65,6 +65,7 @@
 .newsletter {
   background-color: #f8f8f8;
   padding: 20px;
+  margin-top:10%;
 }
 
 .newsletter form {
@@ -233,6 +234,12 @@
         </h1>
         <a class="about-btn" href="./pages/aboutus.html">ABOUT US</a>
         </div>
+<!-- section3 -->
+<div></div>
+
+
+
+
 <!--review-->
 <section class="newsletter">
 
@@ -240,7 +247,9 @@
 
       <h3>subcribe for latest update</h3>
       <input type="email" name="" placeholder="enter your email" class="box">
-      <input type="submit" value="subcribe" class="btn">
+      <!-- <input  onclick = "sendmail"  class="btn"> -->
+
+      <button  id ="btn">send</button>
   </form>
 </section>
    
@@ -252,6 +261,27 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
- 
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+
+let send = document.getElementById("btn");
+send.addEventListener("click",  function(e) {
+  e.preventDefault()
+    Email.send({
+      SecureToken: "7872ecf-7881-42a5-beaa-5cd4832a2c0e ",
+      
+      Host: "smtp.elasticemail.com",
+      Username: "durgalakshmi.perumal@fssa.freshworks.com",
+      Password: "B4123599E50547CB0F61C7D83E8543A34C1E",
+      To: "jayaprakashj2004930@gmail.com",
+      From:"durgalakshmi.perumal@fssa.freshworks.com",
+      Subject: "Test Email",
+      Body: "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>",
+    }).then(
+      message => alert(message)
+    );
+  })
+ </script>
  </body>
 </html>
