@@ -87,7 +87,7 @@ for (let i = 0; i < addtrend.length; i++) {
  
 
   div_card = document.createElement("div")
-  div_card.setAttribute("class", "card")
+  div_card.setAttribute("class", "divcard")
   div_card.style.height = "3%";
   // console.log(div_card)
 

@@ -91,7 +91,9 @@ function readbooklistuser(ar, selector){
 
         // for hr tag
         hr_card = document.createElement("hr")
+        hr_card.setAttribute("class", "hr")
         div_card.append(hr_card)
+
 
         //button-for-read//
         div_read = document.createElement("div")
