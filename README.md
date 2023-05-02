@@ -10,14 +10,7 @@
 
 
 
-
-\\LIVRE is a book reading and selling website people can read all types of books for free here and it contains relaxing music related to the emotion.and you can get suggesed by the people and give suggestion to everyone about your favourite books and you can explore real book library rack in this website to get a real experience of a library.
-
-
-
-
-
-
+LIVRE is a book reading and selling website people can read all types of books for free here and it contains relaxing music related to the emotion.and you can get suggesed by the people and give suggestion to everyone about your favourite books and you can explore real book library rack in this website to get a real experience of a library.
 
 
 PROBLEM STATEMENT:
@@ -197,4 +190,6 @@ Step b : click the edit button in the book card and edit or change the details.
 Step c : click  the  edit button in that, you can see the delete button click delete to delete the song.
 
 Expected result:
+
 The admin can create ,edit and delete songs.
+
