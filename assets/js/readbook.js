@@ -15,41 +15,41 @@
         //whole_card/
   
 
-        div_card = document.createElement("div")
+        let div_card = document.createElement("div")
         div_card.setAttribute("class", "box-1")
         // console.log(div_card)
 
         // card-img //
-        img_card = document.createElement("img")
+        let img_card = document.createElement("img")
         img_card.setAttribute("src", ar[i]["img"])
         img_card.setAttribute("alt", ar[i]["alt"])
         img_card.setAttribute("class", "tb-1")
         div_card.append(img_card)
 
         //book name//
-        img_name = document.createElement("h2")
+        let img_name = document.createElement("h2")
         img_name.setAttribute("class", "bok_name")
         img_name.innerText = ar[i]["book_name"]
         div_card.append(img_name)
 
         // for hr tag
-        hr_card = document.createElement("hr")
+        let hr_card = document.createElement("hr")
         div_card.append(hr_card)
 
         //button-for-read//
-        div_read = document.createElement("div")
+       let div_read = document.createElement("div")
         div_read.setAttribute("class", "read-box")
         div_card.append(div_read)
 
         //read//
-        a_card = document.createElement("a")
+        let a_card = document.createElement("a")
         a_card.setAttribute("class", "tbtn-1")
         a_card.setAttribute("href", ar[i]["bok_link"])
         a_card.innerText = "Read"
         div_read.append(a_card)
 
         //edit
-        e_card = document.createElement("a")
+        let e_card = document.createElement("a")
         e_card.setAttribute("class", "tbtn-1")
         e_card.setAttribute("href","./editreadbooks.html?id="+ar[i]["id"])
         e_card.innerText = "EDIT"
@@ -72,36 +72,36 @@ function readbooklistuser(ar, selector){
         //whole_card//
         const card = ar[i]
 
-        div_card = document.createElement("div")
+        let div_card = document.createElement("div")
         div_card.setAttribute("class", "box-1")
         // console.log(div_card)
 
         // card-img //
-        img_card = document.createElement("img")
+        let img_card = document.createElement("img")
         img_card.setAttribute("src", ar[i]["img"])
         img_card.setAttribute("alt", ar[i]["alt"])
         img_card.setAttribute("class", "tb-1")
         div_card.append(img_card)
 
         //book name//
-        img_name = document.createElement("h2")
+        let img_name = document.createElement("h2")
         img_name.setAttribute("class", "bok_name")
         img_name.innerText = ar[i]["book_name"]
         div_card.append(img_name)
 
         // for hr tag
-        hr_card = document.createElement("hr")
+        let hr_card = document.createElement("hr")
         hr_card.setAttribute("class", "hr")
         div_card.append(hr_card)
 
 
         //button-for-read//
-        div_read = document.createElement("div")
+        let div_read = document.createElement("div")
         div_read.setAttribute("class", "read-box")
         div_card.append(div_read)
 
         //read//
-        a_card = document.createElement("a")
+        let a_card = document.createElement("a")
         a_card.setAttribute("class", "tbtn-1")
         a_card.setAttribute("href", ar[i]["bok_link"])
         a_card.innerText = "Read"
