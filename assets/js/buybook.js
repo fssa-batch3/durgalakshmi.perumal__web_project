@@ -14,7 +14,7 @@ function buybooklist(ar,selector){
   let buyButton;
 
 for (let i = 0; i < ar.length; i++) {
-  const book = ar[i];
+  // const book = ar[i];
 
   // Create the product container
   const productContainer = document.createElement("div");
@@ -24,6 +24,7 @@ for (let i = 0; i < ar.length; i++) {
   const productImage = document.createElement("img");
   productImage.setAttribute("src", ar[i]["book_img"]);
   productImage.alt = "book_image";
+
 
   // Create the product description container
   const productDescContainer = document.createElement("div");
@@ -83,7 +84,7 @@ function buybooklistuser(ar,selector){
   let buyButton;
 
 for (let i = 0; i < ar.length; i++){
-  const book = ar[i];
+  // const book = ar[i];
 
   // Create the product container
   const productContainer = document.createElement("div");

@@ -23,9 +23,9 @@ width: 100%;
 gap:30px;
 position: fixed;
 }
-.full_rack_div{
+/* .full_rack_div{
   background-color:#10283d;
-}
+} */
 </style>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -968,34 +968,34 @@ position: fixed;
   </body>
   <script>
     // Array of image sources
-const imageSources = [
-  './../assets/images/sbook-1.png',
-  './../assets/images/sbook-2.jpg',
-  './../assets/images/sbook-3.jpeg',
-  './../assets/images/sbook-4.jpeg',
-  './../assets/images/sbook-5.png',
-  './../assets/images/sbook-6.jpg',
-  './../assets/images/sbook-7.webp',
-  './../assets/images/sbook-8.jpeg',
-  './../assets/images/sbook-9.jpg'
-];
+// const imageSources = [
+//   './../assets/images/sbook-1.png',
+//   './../assets/images/sbook-2.jpg',
+//   './../assets/images/sbook-3.jpeg',
+//   './../assets/images/sbook-4.jpeg',
+//   './../assets/images/sbook-5.png',
+//   './../assets/images/sbook-6.jpg',
+//   './../assets/images/sbook-7.webp',
+//   './../assets/images/sbook-8.jpeg',
+//   './../assets/images/sbook-9.jpg'
+// ];
 
 // Get the parent element where images will be appended
-const parentElement = document.querySelector('.rack-div');
+// const parentElement = document.querySelector('.rack-div');
 
-// Loop through the image sources array
-for (let i = 0; i < imageSources.length; i++) {
-  // Create a new image element
-  const imgElement = document.createElement('img');
+// // Loop through the image sources array
+// for (let i = 0; i < imageSources.length; i++) {
+//   // Create a new image element
+//   const imgElement = document.createElement('img');
 
-  // Set the attributes for the image element
-  imgElement.className = 'simg-1';// Set class name
-  imgElement.alt = 'Books'; // Set alt text
-  imgElement.src = imageSources[i]; // Set image source
+//   // Set the attributes for the image element
+//   imgElement.className = 'simg-1';// Set class name
+//   imgElement.alt = 'Books'; // Set alt text
+//   imgElement.src = imageSources[i]; // Set image source
 
-  // Append the image element to the parent element
-  parentElement.appendChild(imgElement);
-}
+//   // Append the image element to the parent element
+//   parentElement.appendChild(imgElement);
+// }
 
   </script>
 </html>

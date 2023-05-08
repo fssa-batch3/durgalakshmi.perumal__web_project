@@ -111,9 +111,9 @@
             <a class="navbar-brand" href="./pages/login.html">log in </a>
           </li>
           <li class="nav-item head_btn">
-            <a class="navbar-brand" href="./pages/contactus.html">constact us</a>
+            <a class="navbar-brand" href="./pages/contactus.html">contact us</a>
           </li>
-
+<div id="google_element"></div>
 
           <div class="flex-shrink-0 ">
             <a href="./pages/profile.html">
@@ -144,8 +144,9 @@
 </div> -->
 
  <div class="section-1">
+  <div id="google_element"></div>
   <div class="image-wrapper">
-    <img class="sec_1img" src="./../assets/images/Untitled design.png">
+    <img class="sec_1img"  alt="img" src="./../assets/images/Untitled design.png">
   </div>
   <div class="sec1_content">
 
@@ -170,13 +171,13 @@
  
 <div >
 
-  <img class="design_img1" src="./assets/images/Home (1).png">
+  <img class="design_img1" alt="img" src="./assets/images/Home (1).png">
 <a href="./pages/readbooks.html">  <button class="des_1_btn">START READING</button></a>
 </div>
 
 <!-- section3 -->
 <div>
-  <img class="design_img2" src="./assets/images/About (1).png">
+  <img class="design_img2" alt="img" src="./assets/images/About (1).png">
   
 <a href="./pages/buybooks.html">  <button class="des_2_btn">SHOP HERE!</button></a>
  
@@ -184,7 +185,7 @@
 
 <!-- suggestion -->
 <div class="suggestion_div">
-  <img class="design_img3" src="./assets/images/design-4.png">
+  <img class="design_img3" alt="img"  src="./assets/images/design-4.png">
  <p class="suggestion_para">Would you like to exchange book recommendations?<br>Then try this!</p> 
 <a href="./pages/sugges.html">  <button class="des_3_btn">Suggestion</button></a>
  
@@ -198,7 +199,7 @@
 </div>
  <!-- customer-details -->
  <div class="cus_div">
-  <img class="cus_img" src="./assets/images/DESIGN-3.png">
+  <img class="cus_img" alt="img"  src="./assets/images/DESIGN-3.png">
 </div>
 
 
@@ -286,8 +287,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/index.js"></script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+function loadGoogleTranslate() {
+  new google.translate.TranslateElement("google_element");
+}</script>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
 
 let send = document.getElementById("btn");
@@ -308,5 +313,46 @@ send.addEventListener("click",  function(e) {
     );
   })
  </script>
+ <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+ 
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+  import{
+    getDatabase,
+    set,
+    ref,
+    onValue,
+    push,
+
+  }from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyAP0ECvF6BItSpUdDIpNbG_qSMQojxPApA",
+    authDomain: "livre-the-book-store.firebaseapp.com",
+    projectId: "livre-the-book-store",
+    storageBucket: "livre-the-book-store.appspot.com",
+    messagingSenderId: "887840569038",
+    appId: "1:887840569038:web:d19c711ed73d72a40ec29f"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase();
+  console.log(database)
+  // getting data base
+
+  // create the reference to the key "name" in the database 
+  const starCountRef = ref(database, 'name/' );
+  // getting the current data on the spot
+onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  console.log(data)
+  // updateStarCount(postElement, data);
+});
+
+</script>
  </body>
 </html>
