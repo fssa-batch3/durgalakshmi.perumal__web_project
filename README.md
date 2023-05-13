@@ -10,14 +10,7 @@
 
 
 
-
-\\LIVRE is a book reading and selling website people can read all types of books for free here and it contains relaxing music related to the emotion.and you can get suggesed by the people and give suggestion to everyone about your favourite books and you can explore real book library rack in this website to get a real experience of a library.
-
-
-
-
-
-
+LIVRE is a book reading and selling website people can read all types of books for free here and it contains relaxing music related to the emotion.and you can get suggesed by the people and give suggestion to everyone about your favourite books and you can explore real book library rack in this website to get a real experience of a library.
 
 
 PROBLEM STATEMENT:
@@ -38,15 +31,165 @@ USER FLOW:https://drive.google.com/drive/folders/1jRsgGVSZeY-G7ZwEEq7-Q1EgWBA2h3
 
 WIRE FRAME:https://drive.google.com/drive/folders/1MujP56CQubAWrFWZ2Z-JkE4NBnzTmIFt
 
-
-
-books crud      -till 22
-add books       -
-book list       -
-books details   -
-uplade books    -
-diable or close -
-
-
-
 SONARCLOUD:https://sonarcloud.io/project/overview?id=fssa-batch3_durgalakshmi.perumal__web_project
+
+books crud      -completed
+add books       -completed
+book list       -completed
+books details   -completed
+uplade books    -completed
+diable or close -completed
+
+register user-completed
+read books-completed
+buy books- completed
+song list- completed
+rack crud- not completed
+
+
+
+
+BOOK READER AND BUYER  
+ 
+ Create an account
+ * Scenario 1: Successfully create an account 
+
+
+ -steps:
+  a.Enter the required information such as email and password.
+  b. Click the "create account" button.
+
+  EXPECTED RESULT:
+   The user is redirected to the login page.
+
+  create account through login
+ * scenario 1:loged in and entered into main page.
+
+ -steps:
+ a.entered into the login page 
+ b.rebter your details correctly
+
+
+
+
+
+View trending books
+* Scenario 1: Successfully view books and read the pdf.
+
+-Steps:
+a.View the list of available books.
+b.click the read button 
+c. read the book by pdf
+
+
+Expected Result:
+The user can view the list of available books and read.
+
+
+
+
+
+Buy a book
+* Scenario 1: Successfully purchase a book
+
+Steps:
+a.Select a book .
+b.Click the "Buy Now" button.
+
+
+Expected Result:
+* The user is redirected to the order confirmation page.
+* An order confirmation email is sent to the user's email address.
+
+
+read books
+* Scenario 1:successfully read a book
+
+Steps:
+a.select the category the reader wants to read. 
+b.choose the book.
+c. click the "read" button.
+d. Then the user can find the corresponding pfd of the book 
+
+ Expected result:
+ * the user can find the pdf of the book they needed.
+
+
+listen songs
+* Scenario 1:successfully listen songs
+
+Steps:
+a.sview the songs list
+b.choose the song.
+c. click the play button.
+d. Then the user can listen the songs 
+
+ Expected result:
+ * the user can lestern the songs
+
+Login as admin
+ 
+Scenario 1: successfully logined as admin.
+Steps:
+Step a: enter the correct  email for login
+Step b: enter the correct password 
+
+
+Expected result: the admin is redirected to the home page
+
+Trending books
+ 
+Scenario 1 : successful ,create edit and delete trending book list.
+Steps :
+Step a : click the add books button - create new trending books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Read books
+ 
+Scenario 1 : successful ,create edit and delete read book list.
+
+Steps :
+Step a : click the add books button - create new read  books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Buy books
+ 
+Scenario 1 : successful ,create edit and delete read book list.
+
+Steps :
+Step a : click the add books button - create new buy  books.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the book.
+
+Expected result:
+The admin can create ,edit and delete books.
+
+Songs
+ 
+Scenario 1 : successful ,create edit and delete song list.
+
+Steps :
+Step a : click the add books button - create new songs.
+
+Step b : click the edit button in the book card and edit or change the details.
+
+Step c : click  the  edit button in that, you can see the delete button click delete to delete the song.
+
+Expected result:
+
+The admin can create ,edit and delete songs.
+

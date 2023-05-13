@@ -42,11 +42,12 @@
           <button class="btn btn-danger" id="btn-delete" type="delete">Delete</button>
         </div>
       </div>
+
     </form>
     <script>
 
     //  get array from localstorage
-      let box = JSON.parse(localStorage.getItem("form"));
+      let box = JSON.parse(localStorage.getItem("readbooks"));
       // console.log(box);
 
       //url params
@@ -57,19 +58,20 @@ const get_id = url_params.get("id");
 console.log(get_id);
 let pro_obj = box.find(function(product){
 let check_id = product["id"];
-if( check_id == get_id){
+if( get_id == check_id){
   return true;
 }
 })
-console.log(pro_obj);
+console.log(pro_obj)
 
-let book_image = document.getElementById("img_url");
+let book_img = document.getElementById("img_url");
 let book_name = document.getElementById("bok_name");
 let book_link = document.getElementById("pdf_url");
 
-book_image.value = pro_obj["img"]
+book_img.value = pro_obj["img"]
 book_name.value = pro_obj["book_name"]
 book_link.value = pro_obj["bok_link"]
+
 
 // For Edit
 let form = document.getElementById("update_form")
@@ -83,7 +85,7 @@ let link = document.getElementById("pdf_url").value;
 let edit_obj = {
   img:image,
   book_name:name,
-  bok_link:link,
+  bok_link:link
 }
 // console.log(edit_obj);
 
@@ -91,14 +93,11 @@ let edit_obj = {
 let checked_obj = Object.assign(pro_obj, edit_obj)
 console.log(checked_obj);
 
-// let index = box.indexOf(edit_obj);
-//  console.log(index);
 
-localStorage.setItem("form",JSON.stringify(box))
 
+localStorage.setItem("readbooks",JSON.stringify(box))
 alert("Successfully changed")
-45348
-window.location.href = "./trend.html";
+window.location.href = "./readbooks.html";
 
 })
 
@@ -113,8 +112,8 @@ delete_card.addEventListener("click", function (event) {
             else{
               box.splice(Index, 1);
                 console.log(box);
-                localStorage.setItem("form", JSON.stringify(box))
-                window.location.href = "./trend.html";
+                localStorage.setItem("readbooks", JSON.stringify(box))
+                window.location.href = "../pages/readbooks.html";
             }
            
         })
