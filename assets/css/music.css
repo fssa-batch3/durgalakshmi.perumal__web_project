@@ -39,6 +39,7 @@ body {
   border-radius: 20px;
   height: 100px;
   width: 700px;
+  /* margin-top: 10%; */
 }
 .piano {
   height: 80px;
@@ -62,4 +63,7 @@ body {
 .heart:hover {
   background-color: palevioletred;
   border-radius: 30px;
+}
+.adddiv{
+  margin-top: 14%;
 }

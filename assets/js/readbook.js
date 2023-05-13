@@ -1,48 +1,52 @@
-  
+  // get the details from local storage 
       const adventure_boks = JSON.parse(localStorage.getItem("readbooks"))
       const admin_email = JSON.parse(localStorage.getItem("details"))
 
+// array 
+
+
+
+
       //card for admin//
+
+      // initialization of variable 
        function readbooklist(ar, selector){
       let div_card;
       let img_card;
       let img_name;
       let hr;
       let a_card;
-      let e_card;
+    
 
       for (let i = 0; i < ar.length; i++) {
         //whole_card/
-  
-
-        let div_card = document.createElement("div")
+        div_card = document.createElement("div")
         div_card.setAttribute("class", "box-1")
-        // console.log(div_card)
-
+       
         // card-img //
-        let img_card = document.createElement("img")
+        img_card = document.createElement("img")
         img_card.setAttribute("src", ar[i]["img"])
         img_card.setAttribute("alt", ar[i]["alt"])
         img_card.setAttribute("class", "tb-1")
         div_card.append(img_card)
 
         //book name//
-        let img_name = document.createElement("h2")
+        img_name = document.createElement("h2")
         img_name.setAttribute("class", "bok_name")
         img_name.innerText = ar[i]["book_name"]
         div_card.append(img_name)
 
         // for hr tag
-        let hr_card = document.createElement("hr")
+        hr_card = document.createElement("hr")
         div_card.append(hr_card)
 
         //button-for-read//
-       let div_read = document.createElement("div")
+        div_read = document.createElement("div")
         div_read.setAttribute("class", "read-box")
         div_card.append(div_read)
 
         //read//
-        let a_card = document.createElement("a")
+        a_card = document.createElement("a")
         a_card.setAttribute("class", "tbtn-1")
         a_card.setAttribute("href", ar[i]["bok_link"])
         a_card.innerText = "Read"
@@ -66,42 +70,41 @@ function readbooklistuser(ar, selector){
       let img_name;
       let hr;
       let a_card;
-      let e_card;
+
 
       for (let i = 0; i < ar.length; i++) {
         //whole_card//
-        const card = ar[i]
 
-        let div_card = document.createElement("div")
+        div_card = document.createElement("div")
         div_card.setAttribute("class", "box-1")
         // console.log(div_card)
 
         // card-img //
-        let img_card = document.createElement("img")
+        img_card = document.createElement("img")
         img_card.setAttribute("src", ar[i]["img"])
         img_card.setAttribute("alt", ar[i]["alt"])
         img_card.setAttribute("class", "tb-1")
         div_card.append(img_card)
 
         //book name//
-        let img_name = document.createElement("h2")
+        img_name = document.createElement("h2")
         img_name.setAttribute("class", "bok_name")
         img_name.innerText = ar[i]["book_name"]
         div_card.append(img_name)
 
         // for hr tag
-        let hr_card = document.createElement("hr")
+        hr_card = document.createElement("hr")
         hr_card.setAttribute("class", "hr")
         div_card.append(hr_card)
 
 
         //button-for-read//
-        let div_read = document.createElement("div")
+        div_read = document.createElement("div")
         div_read.setAttribute("class", "read-box")
         div_card.append(div_read)
 
         //read//
-        let a_card = document.createElement("a")
+        a_card = document.createElement("a")
         a_card.setAttribute("class", "tbtn-1")
         a_card.setAttribute("href", ar[i]["bok_link"])
         a_card.innerText = "Read"
@@ -119,10 +122,9 @@ function readbooklistuser(ar, selector){
      const create_adventure_book = [];
   for (let i = 0; i < productAppend("adventure").length; i++) {
     create_adventure_book.push(productAppend("adventure")[i]);
-    // console.log(create_adventure_book);
+    console.log(create_adventure_book);
   }
-  // readbooklist(create_adventure_book, "#adventure");
-
+ 
 
   if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_adventure_book, "#adventure");
@@ -140,7 +142,7 @@ function readbooklistuser(ar, selector){
       create_triller_book.push(productAppend("triller")[i]);
       console.log(create_triller_book);
    }
-  //  readbooklist(create_triller_book, "#thriller");
+  
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_triller_book, "#thriller");
@@ -156,7 +158,7 @@ function readbooklistuser(ar, selector){
     for(let i = 0; i < productAppend("romantic").length;i++){
       create_romantic_book.push(productAppend("romantic")[i]);
    }
-  //  readbooklist(create_romantic_book,"#romantic");
+
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_romantic_book, "#romantic");
@@ -173,7 +175,7 @@ function readbooklistuser(ar, selector){
     for(let i = 0; i < productAppend("comedy").length;i++){
       create_comedy_book.push(productAppend("comedy")[i]);
    }
-  //  readbooklist(create_comedy_book,"#comedy");
+
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_comedy_book, "#comedy");
@@ -189,7 +191,7 @@ function readbooklistuser(ar, selector){
     for(let i = 0; i < productAppend("classic").length;i++){
       create_classic_book.push(productAppend("classic")[i]);
    }
-  //  readbooklist(create_classic_book,"#classic");
+
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_classic_book, "#classic");
@@ -206,7 +208,7 @@ function readbooklistuser(ar, selector){
     for(let i = 0; i < productAppend("horror").length;i++){
       create_horror_book.push(productAppend("horror")[i]);
    }
-  //  readbooklist(create_horror_book,"#horror");
+
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_horror_book, "#horror");
@@ -215,6 +217,7 @@ function readbooklistuser(ar, selector){
     readbooklistuser(create_horror_book, "#horror");
   }
 
+  //  devotional 
 
 let devotional_book;
 
@@ -222,12 +225,12 @@ let devotional_book;
     for(let i = 0; i < productAppend("devotional").length;i++){
       create_devotional_book.push(productAppend("devotional")[i]);
    }
-  //  readbooklist(create_devotional_book,"#devotional");
+  
 
    if(admin_email == "admindurga@gmail.com"){
     readbooklist(create_devotional_book, "#devotional");
   
-
+// create the add books button only for the admin  
   let create_a = document.createElement("a");
   create_a.setAttribute("href", "./addreadbooks.html");
 

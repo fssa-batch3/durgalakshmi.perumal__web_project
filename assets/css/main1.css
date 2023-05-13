@@ -1,5 +1,6 @@
 .home {
   transition: transition;
+  
 }
 .home:hover {
   color: #020609;
@@ -9,7 +10,11 @@
   transition: transition;
   color: white;
 }
-
+.head-cont{
+  margin-left: 40%;
+  font-size: 3%;
+  /* gap: 40px; */
+}
 .about:hover {
   transform: scale(1.2);
   color: white;
@@ -129,6 +134,61 @@
 h1 {
   font-size: 20px;
 }
+.sec-1-img{
+  position: relative;
+  display: flex;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:xxx-large;
+  height: 10%;
+
+padding: 10 10 10 0;
+max-width: 100%;
+width: 100%;
+}
 .section-1 {
-  background-color: white;
+ 
+  position: relative;
+  display: flex;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:xxx-large;
+  height: auto;
+
+padding: 10 10 10 20;
+max-width: 100%;
+width: 200%;
+}
+.section-1-btn{
+  position: absolute;
+  
+    margin-left:14%;
+   /* position: relative; */
+    margin-top:40%;
+  
+
+}
+.section-1-btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(19, 19, 74);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #0c3a53;
+  text-decoration: none;
+  /* -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+}
+
+.section-1-btn:active {
+  scale: 0.92;
+}
+
+.section-1-btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(0, 3, 9, 0.681) 0%, rgba(240, 242, 242, 0.873) 60%);
+  color: rgb(4, 4, 38);
 }

@@ -139,28 +139,32 @@ h1 {
       </div>
       <div class="s-2">
         <h1>SENT US A MESSAGE</h1>
+        <form onsubmit="sendEmail(); reset(); return false;">
         <label class="n"> <b>Name</b> </label>
-        <input class="fb" type="text" placeholder="Enter Name" required /><br />
+        <input class="fb" type="text" id="name-input" placeholder="Enter Name" required /><br />
 
-        <label class="n"><b>Email</b></label>
+        <label class="n"> <b>Email</b></label>
         <input
           class="fb"
           type="text"
           placeholder="Enter Email"
           required
+          id="email"
         /><br />
         <textarea
           placeholder="message..."
           name="msg"
+          message-input
           required
           class="fb-1"
         ></textarea>
 
-        <a href="./../index.html"
-          ><button type="submit" class="btn">Cancel</button></a
-        >
-        <button type="button" class="btn">submit</button>
+        <!-- <a href="./../index.html" -->
+          <button  id="cancel-btn" type="button" class="btn">Cancel</button>
+        
+        <button  onclick="sendEmail()">submit</button>
       </div>
+      </form>
     </div>
     <div class="adddiv"></div>
     <div class="section_4">
@@ -198,15 +202,41 @@ h1 {
     
       <div class="list_3">
         <h1>Contact us with</h1>
-      <a href="#" ><img class="fi" src="./assets/images/fb.jpg" alt="fb" /></a>
-      <a href="#" ><img class="fi" src="./assets/images/twitter.png" alt="twitter" /></a>
-      <a href="#" > <img class="fi" src="./assets/images/insta_icon.jpeg" alt="insta" /></a>
+      <a href="#" ><img class="fi" src="../assets/images/fb.jpg" alt="fb" /></a>
+      <a href="#" ><img class="fi" src="../assets/images/twitter.png" alt="twitter" /></a>
+      <a href="#" > <img class="fi" src="../assets/images/insta_icon.jpeg" alt="insta" /></a>
       </div>
     </div>
     <div class="copyrights">
       @copyrights 2023 Livre | All rights reserved
     </div>
-   
+ 
     
-  </body>
+ 
+  
+
+<script>src="https://smtpjs.com/v3/smtp.js"</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+
+ 
+  function sendEmail(){
+    // let mail = document.getElementById("email").value;
+    console.log(mail)
+    Email.send({
+    Host : "smtp.gmail.com",
+    Username : "durgalakshmi.perumal@fssa.freshworks.com",
+    SecureToken : "7872ecf-7881-42a5-beaa-5cd4832a2c0e",
+    Password : "B4123599E50547CB0F61C7D83E8543A34C1E",
+    To :"durgalakshmi.22laks@gmail.com",
+    From :  document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+  }
+</script>
+</body>
 </html>

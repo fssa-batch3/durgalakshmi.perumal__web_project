@@ -50,7 +50,7 @@
         
         <div class="form-group form-check">
          
-          <button id="btn-delete" type="submit">Delete </button>
+          <button id="btn-delete" type="submit">Log out </button>
           <button id="btn-sub" type="submit"> Save changes </button>
         </div>
         <div class="form-group form-check">
@@ -58,7 +58,7 @@
          
         </div>
 
-        
+     
          
         
       </form>
@@ -67,11 +67,13 @@
     </div>
 
     <script>
+
+    // getting the data from the array deatils and user datails
       let current_email = JSON.parse(localStorage.getItem("details"))
 
      let user_about = JSON.parse(localStorage.getItem("usersdetails"))
      console.log(user_about)
-
+  // among the details, finding the current user deatils to display in profile
      let User_obj = user_about.find(function (user_about) {
             let check_email = user_about["user_email"]
             if (current_email == check_email) {
@@ -79,26 +81,16 @@
                 return true;  
             }
         })
-        // console.log(user_obj);
-        // if (firstname === undefined) {
-        //     document.getElementById('fname').style.display = 'none';
-        //     }
-        //     if (lastname === undefined) {
-        //     document.getElementById('lname').style.display = 'none';
-        //     }
-
-
-
-  
-      
+      // get the current email the user entered in login
         let mail = document.getElementById("email");      
-       
+      //  checking the current email and the already extisting email
         mail.value = current_email;
      
        
 
-
+// get the deatils from the form
         let pro_info = document.getElementById("form");
+       
         pro_info.addEventListener("submit", function (event) {
             event.preventDefault();
 
@@ -109,16 +101,17 @@
             let user_ph_num = document.getElementById("ph_number").value;
            
           
-            
-            if (isNaN(user_age)||user_age<1||user_age>110){ 
-    alert("The age must be a number between 1 and 110");
+            // the age must be 10 to 110
+            if (isNaN(user_age)||user_age<10||user_age>110){ 
+    alert("The age must be a number between 10 and 110");
     return ;}
 
-
-    if (user_ph_num !=10){ 
+// the phone number must be 10 numbers
+    if (user_ph_num.length != 10){ 
     alert("The phone number must be only 10 numbers");
     return ;}
-
+    
+    // initializing the variable useing let
             let user_object = {
                 user_name,
                 user_lastname,
@@ -128,31 +121,36 @@
                 
             };
 
-            let checked_obj = Object.assign( User_obj,user_object)
+            //  merge the properties of two objects into a new object called checked_obj
+            let checked_obj = Object.assign(User_obj, user_object)
             console.log(checked_obj);
-            
+            // find the index then store in index variable
             let index = user_about.indexOf(User_obj);
             console.log(index);
 
             user_about[index] = checked_obj;
-
+        //  then set the new object in the local storage
             localStorage.setItem("usersdetails",JSON.stringify(user_about))
-
+            // throw an alert
             alert("Successfully changed")
+            // redirecting to another page
             window.location.href = "./../index.html";
-            // location.reload();
+          
         }) 
+
+        // if the user is true
           let check = true;
+          // find the current user deatils and check weather it is corrct 
         let present_details = user_about.find(function (user) {
             let check_email = user["user_email"]
             if (current_email === check_email) {
-                
+                // get the elements by the id 
               let firstname = document.getElementById("fname");
             let lastname = document.getElementById("lname");
             let age = document.getElementById("age");
             let email = document.getElementById("email");
             let phone = document.getElementById("ph_number");
-
+            // the values of the input fields are set to the corresponding values in the user object
 
             firstname.value = user["user_name"];
             lastname.value = user["user_lastname"];
@@ -162,11 +160,15 @@
 
             }
         })
-        
+                    // delete user profile starts
+
+        // get the delete element id
         let user_delete = document.getElementById("btn-delete");
+        // assign the work by addeventlistener
         user_delete.addEventListener("click", function (event) {
             event.preventDefault()
             let Index = user_about.indexOf(User_obj)
+            // confirm that the user want to delete or not by a msg
             let msg = confirm("Are you sure want to delete your account")
             if (msg !== true) {
                 return
@@ -175,11 +177,11 @@
                 user_about.splice(Index, 1);
                 console.log(user_about);
                 localStorage.setItem("usersdetails", JSON.stringify(user_about))
-                // location.reload()
+            
                 window.location.href = "./sign.html";
             }
         })
-
+                     // delete user profile ends
 
     </script>
   </body>

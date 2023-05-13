@@ -1,49 +1,55 @@
 
-
+// get the details from localStorage
 const adventure_buy_boks = JSON.parse(localStorage.getItem("formtoaddbuybooks")) ;
 const admin_email = JSON.parse(localStorage.getItem("details"))
 
 // for admin
+
+// initialization of variable 
 function buybooklist(ar,selector){
   let productContainer;
   let productImage;
   let productDescContainer;
   let bookNameText;
   let priceText;
-  let shoppingCartIcon;
+  // let shoppingCartIcon;
   let buyButton;
-
+let hr_card;
 for (let i = 0; i < ar.length; i++) {
-  // const book = ar[i];
 
   // Create the product container
-  const productContainer = document.createElement("div");
+   productContainer = document.createElement("div");
   productContainer.classList.add("product");
 
   // Create the product image
-  const productImage = document.createElement("img");
+   productImage = document.createElement("img");
   productImage.setAttribute("src", ar[i]["book_img"]);
+  productImage.setAttribute("class", "product-image");
   productImage.alt = "book_image";
 
-
+ // for hr tag
+ hr_card = document.createElement("hr")
+ hr_card.setAttribute("class", "hr")
+ productImage.append(hr_card)
   // Create the product description container
-  const productDescContainer = document.createElement("div");
+   productDescContainer = document.createElement("div");
   productDescContainer.classList.add("desc");
 
   // Create the book name text node
-  const bookNameText = document.createTextNode(ar[i]["book_name"]);
+   bookNameText = document.createTextNode(ar[i]["book_name"]);
 
   // Create the price text node
-  const priceText = document.createTextNode(ar[i]["book_price"]);
+   priceText = document.createTextNode(ar[i]["book_price"]);
 
 
 
   // Create the buy button
-  const buyButton = document.createElement("button");
+  buyButton = document.createElement("a");
   buyButton.classList.add("buy_btn");
   buyButton.textContent = "Buy";
+  buyButton.setAttribute("href", "../pages/pay.html" )
 
- const editButton = document.createElement("a");
+  editButton = document.createElement("a");
  editButton.setAttribute("class", "edit_btn btn btn-primary")
  editButton.setAttribute("href", "../pages/editbuybooks.html?id=" + ar[i]["id"])
  editButton.innerText = "Edit"
@@ -64,16 +70,13 @@ for (let i = 0; i < ar.length; i++) {
   productContainer.append(productImage);
   productContainer.append(productDescContainer);
 
-
-
-
-  
   document.querySelector(selector).append(productContainer)
 }
 }
 
-
 // for user
+
+// initialization of variable 
 function buybooklistuser(ar,selector){
   let productContainer;
   let productImage;
@@ -82,54 +85,88 @@ function buybooklistuser(ar,selector){
   let priceText;
 //   let shoppingCartIcon;
   let buyButton;
+  let hr_card
 
 for (let i = 0; i < ar.length; i++){
   // const book = ar[i];
 
   // Create the product container
-  const productContainer = document.createElement("div");
+   productContainer = document.createElement("div");
   productContainer.classList.add("product");
 
   // Create the product image
-  const productImage = document.createElement("img");
+   productImage = document.createElement("img");
   productImage.setAttribute("src", ar[i]["book_img"]);
+  productImage.setAttribute("class", "product-image");
   productImage.alt = "book_image";
-
+  // hr 
+  hr_card = document.createElement("hr")
+  hr_card.setAttribute("class", "hr")
+  productImage.append(hr_card)
   // Create the product description container
-  const productDescContainer = document.createElement("div");
+   productDescContainer = document.createElement("div");
   productDescContainer.classList.add("desc");
 
-  // Create the book name text node
-  const bookNameText = document.createTextNode(ar[i]["book_name"]);
+  // // Create the book name text node
+  // const bookNameText = document.createTextNode(ar[i]["book_name"]);
 
-  // Create the price text node
-  const priceText = document.createTextNode(ar[i]["book_price"]);
+  // // Create the price text node
+  // const priceText = document.createTextNode(ar[i]["book_price"]);
+// Create the book name element
+ bookNameText = document.createElement('p');
+bookNameText.innerText = ar[i]['book_name'];
+bookNameText.setAttribute("class","book_title")
 
+// Create the price element
+ priceText = document.createElement('p');
+priceText.innerText = ar[i]['book_price'];
+priceText.setAttribute("class","book_price")
+
+// div for buttons
+
+ divbtn = document.createElement("div")
+divbtn.classList.add("btndiv");
 
   // Create the buy button
-  const buyButton = document.createElement("button");
+   buyButton = document.createElement("a");
   buyButton.classList.add("buy_btn");
   buyButton.textContent = "Buy";
+  buyButton.setAttribute("href", "../pages/pay.html" )
+
+  //  cart_a = document.createElement("a");
+  // cart_a.setAttribute("class", "add-cart");
+  // cart_a.setAttribute("id", "cart");
+  // cart_a.innerText = "Add to cart";
+  
 
 
+// create the cart button 
+// const cartbutton = document.createElement("img");
+// cartbutton.setAttribute("class", "cart-image")
+// cartbutton.setAttribute("src","../assets/images/add-to-basket .png");
+// cart_a.append(cartbutton)
 
   // Add the book name text, price text, shopping cart icon, and buy button to the product description container
   productDescContainer.append(bookNameText);
   productDescContainer.append(document.createElement('br'));
   productDescContainer.append(priceText);
   productDescContainer.append(document.createElement('br'));
-  // productDescContainer.append(shoppingCartIcon);
-  productDescContainer.append(buyButton);
+  productDescContainer.append(divbtn);
+  divbtn.append(buyButton);
+  // divbtn.append(cart_a);
+
  
 
 
   // Add the product image and product description container to the product container
   productContainer.append(productImage);
   productContainer.append(productDescContainer);
+  // productContainer.append()
 
   document.querySelector(selector).append(productContainer)
 }
 }
+// fileter the product using id
 function productAppend(type) {
     const productsection = adventure_buy_boks.filter((h) => h.section === type);
     return productsection;
@@ -141,7 +178,6 @@ function productAppend(type) {
     // console.log(create_buyadventure_book);
   }
 
-  
   if(admin_email == "admindurga@gmail.com"){
     buybooklist(create_buyadventure_book, "#adventure");
   }
@@ -231,15 +267,17 @@ function productAppend(type) {
     for(let i = 0; i < productAppend("devotional").length;i++){
       create_buydevotional_book.push(productAppend("devotional")[i]);
    }
+  //  if login person is admin show this buttons
 
   if(admin_email == "admindurga@gmail.com"){
     buybooklist(create_buydevotional_book, "#devotional");
 
     let create_a = document.createElement("a");
-  create_a.setAttribute("href", "./readbooks.html");
+  create_a.setAttribute("href", "../pages/addbuybooks.html");
 
   let create_btn = document.createElement("button");
   create_btn.setAttribute("class", "add_btn");
+
   create_btn.innerText = "Add product";
   create_a.append(create_btn);
 

@@ -21,20 +21,20 @@ for (let i = 0; i < addtrend.length; i++) {
   //whole_card//
  
 
-  let div_card = document.createElement("div")
+   div_card = document.createElement("div")
   div_card.setAttribute("class", "card")
   div_card.style.height = "3%";
   // console.log(div_card)
 
   // card-img //
-  let img_card = document.createElement("img")
+   img_card = document.createElement("img")
   img_card.setAttribute("src", addtrend[i]["img"])
   img_card.setAttribute("alt", addtrend[i]["alt"])
   img_card.setAttribute("class", "card-img-top")
   div_card.append(img_card)
 
    //book name//
-   let img_name = document.createElement("h2")
+    img_name = document.createElement("h2")
    img_name.setAttribute("class", "card-title")
    img_name.innerText = addtrend[i]["book_name"]
    div_card.append(img_name)
@@ -46,7 +46,7 @@ for (let i = 0; i < addtrend.length; i++) {
   div_card.append(div_read)
 
   //read//
-  let a_card = document.createElement("a")
+   a_card = document.createElement("a")
   a_card.setAttribute("class", "tbtn-1")
   a_card.setAttribute("href", addtrend[i]["bok_link"])
   a_card.innerText = "Read"

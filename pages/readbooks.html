@@ -13,6 +13,10 @@
   />
   <link
   rel="stylesheet"
+  href="./../assets/css/header.css"
+/>
+  <link
+  rel="stylesheet"
   href="./../assets/css/footer.css"
 />
   </head>
@@ -20,7 +24,9 @@
   <body>
     
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+     <!--nav starts-->
+
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       
       <div class="container">
         <button
@@ -34,8 +40,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- header -->
-  
+        <!--header-->
+
         <div
           class="collapse navbar-collapse header"
           id="navbarSupportedContent"
@@ -43,73 +49,64 @@
           <div class="head-logo">
             <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
           </div>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
          
             <li class="nav-item head_btn">
-              <a class="navbar-brand" href="mybooks.html">My books</a>
+              <a class="navbar-brand" href="../mybooks.html">My books</a>
             </li>
-       
+         
+            <!--<li class="nav-item head_btn">
+              <a class="navbar-brand" href="sugges.html">suggestions</a>
+            </li>-->
             
          
             <li class="nav-item dropdown head_btn">
-              <a
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                Browse                                   
-            >
-            LIST
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Browse
+              </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Random books</a></li>
                 <li>
-                  <a class="dropdown-item" href="trend.html">Trending books</a>
-                </li>
-  
-                <li>
-                  <a class="dropdown-item" href="textbook.html">Text books</a>
+                  <a class="dropdown-item" href="../pages/trendbooks.html">Trending books</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="buybook.html">Buy books</a>
+                  <a class="dropdown-item" href="../pages/readbooks.html">Read books</a>
                 </li>
-  
                 <li>
-                  <a class="dropdown-item" href="rack.html">Rack library</a>
+                  <a class="dropdown-item" href="../pages/sugges.html">Suggestions</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/buybooks.html">Buy books</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/rack.html">Rack library</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../pages/musics.html">Music</a>
                 </li>
               </ul>
-            </li>    
+            </li>
+      
           </ul>      
        
-  
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success input" type="text" id="search_input">
-              Search
-            </button>
-          </form>
           <li class="nav-item head_btn">
-            <a class="navbar-brand" href="./login.html">log in </a>
+            <a class="navbar-brand" href="../pages/contactus.html">contact us</a>
           </li>
+
           <li class="nav-item head_btn">
-            <a class="navbar-brand" href="./contactus.html">constact us</a>
+            <a class="navbar-brand" href="../pages/login.html">log in </a>
           </li>
-  
-  
+         
+<!-- <div id="google_element"></div> -->
+
           <div class="flex-shrink-0 ">
+            <a href="../pages/profile.html">
             <img src="./../assets/images/Screenshot 2023-04-04 135236.png"
               alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
-              style="width:50px;">
-  
+              style="width:50px;"></a>
+
             
         </div>
       </div>
-    </div>
-
+    
     </nav>
  
  
@@ -131,7 +128,8 @@
               </div>
               </div>
           
-            
+            <br>
+            <div class="sec-1">
                <div><h4>ADVENTURE </h4></div>
                 <div id="adventure" class="readdiv container"></div>
                 <br>
@@ -158,6 +156,7 @@
 
                 <div><h4>DEVOTIONAL</h4></div>
                 <div id="devotional" class="readdiv container"></div>
+                </div>
                 <div class="section_4">
                   <div class="list-1">
                     <h4>about</h4>
@@ -193,9 +192,9 @@
                 
                   <div class="list_3">
                     <h1>Contact us with</h1>
-                  <a href="#" ><img class="fi" src="./assets/images/fb.jpg" alt="fb" /></a>
-                  <a href="#" ><img class="fi" src="./assets/images/twitter.png" alt="twitter" /></a>
-                  <a href="#" > <img class="fi" src="./assets/images/insta_icon.jpeg" alt="insta" /></a>
+                  <a href="#" ><img class="fi" src="../assets/images/fb.jpg" alt="fb" /></a>
+                  <a href="#" ><img class="fi" src="../assets/images/twitter.png" alt="twitter" /></a>
+                  <a href="#" > <img class="fi" src="../assets/images/insta_icon.jpeg" alt="insta" /></a>
                   </div>
                 </div>
                 <div class="copyrights">

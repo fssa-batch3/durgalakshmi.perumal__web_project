@@ -9,7 +9,11 @@
   />
   <link
   rel="stylesheet"
-  href="./../assets/css/footer.css"
+  href="./../assets/css/header.css"
+/>
+<link
+rel="stylesheet"
+href="./../assets/css/footer.css"
 />
     <style>
      .logo {
@@ -37,12 +41,14 @@
       }
       .section-1 {
         display: flex;
+        margin-top: 5%;
       }
       h2 {
         color: white;
         font-size: 30px;
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
         margin-left: 100px;
+        margin-top: 20%;
       }
       p {
         color: #b6d2ea;
@@ -104,107 +110,90 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+   <!--nav starts-->
+
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
       
-      <div class="container">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--header-->
+    <div class="container">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--header-->
 
-        <div
-          class="collapse navbar-collapse header"
-          id="navbarSupportedContent"
-        >
-          <div class="head-logo">
-            <img class="logo" alt="img" src="./../assets/images/dulogo.png" alt="logo" />
-          </div>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!--<li class="nav-item">
-              <a class="navbar-brand" href="main.html">Home</a>
-            </li>-->
-            <li class="nav-item head_btn">
-              <a class="navbar-brand" href="mybooks.html">My books</a>
-            </li>
-         
-            <!--<li class="nav-item head_btn">
-              <a class="navbar-brand" href="sugges.html">suggestions</a>
-            </li>-->
-            
-         
-            <li class="nav-item dropdown head_btn">
-              <a
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                Browse                                   
-            >
-            LIST
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./pages/trendbooks.html">Trending books</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./pages/readbooks.html">readbooks</a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item" href="./pages/sugges.html">suggestions</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./pages/buybooks.html">Buy books</a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item" href="./pages/rack.html">Rack library</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./pages/musics.html">Music</a>
-                </li>
-              </ul>
-            </li>    
-          </ul>      
-       
-
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-          <li class="nav-item head_btn">
-            <a class="navbar-brand" href="./pages/login.html">log in </a>
-          </li>
-          <li class="nav-item head_btn">
-            <a class="navbar-brand" href="./contactus.html">constact us</a>
-          </li>
-
-
-          <div class="flex-shrink-0 ">
-            <a href="./pages/profile.html">
-            <img alt="img"  src="./../assets/images/Screenshot 2023-04-04 135236.png"
-              alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
-              style="width:50px;"></a>
-
-            
+      <div
+        class="collapse navbar-collapse header"
+        id="navbarSupportedContent"
+      >
+        <div class="head-logo">
+          <img class="logo" src="./../assets/images/dulogo.png" alt="logo" />
         </div>
+       
+          <li class="nav-item head_btn">
+            <a class="navbar-brand" href="./mybooks.html">My books</a>
+          </li>
+       
+          <!--<li class="nav-item head_btn">
+            <a class="navbar-brand" href="sugges.html">suggestions</a>
+          </li>-->
+          
+       
+          <li class="nav-item dropdown head_btn">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Browse
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="./pages/trendbooks.html">Trending books</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./pages/readbooks.html">Read books</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./pages/sugges.html">Suggestions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./pages/buybooks.html">Buy books</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./pages/rack.html">Rack library</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./pages/musics.html">Music</a>
+              </li>
+            </ul>
+          </li>
+    
+        </ul>      
+     
+        <li class="nav-item head_btn">
+          <a class="navbar-brand" href="./pages/contactus.html">contact us</a>
+        </li>
+
+        <li class="nav-item head_btn">
+          <a class="navbar-brand" href="./pages/login.html">log in </a>
+        </li>
+       
+<!-- <div id="google_element"></div> -->
+
+        <div class="flex-shrink-0 ">
+          <a href="./pages/profile.html">
+          <img src="./../assets/images/Screenshot 2023-04-04 135236.png"
+            alt="Generic placeholder image" class="img-fluid rounded-circle border border-dark border-3"
+            style="width:50px;"></a>
+
+          
       </div>
-      
-    </nav>
+    </div>
+  
+  </nav>
    
     <hr />
     <h1>ABOUT US</h1>
@@ -293,9 +282,9 @@
       
         <div class="list_3">
           <h1>Contact us with</h1>
-        <a href="#" ><img class="fi" src="./assets/images/fb.jpg" alt="fb" /></a>
-        <a href="#" ><img class="fi" src="./assets/images/twitter.png" alt="twitter" /></a>
-        <a href="#" > <img class="fi" src="./assets/images/insta_icon.jpeg" alt="insta" /></a>
+        <a href="#" ><img class="fi" src="../assets/images/fb.jpg" alt="fb" /></a>
+        <a href="#" ><img class="fi" src="../assets/images/twitter.png" alt="twitter" /></a>
+        <a href="#" > <img class="fi" src="../assets/images/insta_icon.jpeg" alt="insta" /></a>
         </div>
       </div>
       <div class="copyrights">

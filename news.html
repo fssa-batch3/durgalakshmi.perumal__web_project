@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News API</title>
+</head>
+<body>
+    
+
+    <div id="newsdiv">
+      <input type="text" id="search">
+      <button id="submit">Submit</button>
+    </div>
+
+    <div>
+        <h1 id="heading"></h1>
+    </div>
+
+
+    <script>
+
+let button = document.getElementById("submit");
+button.addEventListener("click",(event)=> {
+    event.preventDefault();
+
+    let input = document.getElementById("search").value;
+    console.log(input);
+
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '0f940aab35msh84dfb1a3b31d890p17380djsnffea05a95885',
+		'X-RapidAPI-Host': 'news-api14.p.rapidapi.com'
+	}
+};
+
+
+ let url =`https://news-api14.p.rapidapi.com/top-headlines?country=us&language=en&pageSize=10&category=${input}`;
+
+ let x;
+ fetch(url,options)
+ .then((res) => res.json())
+ .then((res) => { 
+    
+    console.log(res.articles[0]["title"])
+
+    x = res.articles[0]["title"];
+
+
+    let heading = document.getElementById("heading");
+    heading.innerText = x;
+    
+    
+ })
+ .catch((err) => console.error(err));
+
+ 
+
+})
+
+
+
+
+
+
+    </script>
+</body>
+</html>
