@@ -11,7 +11,7 @@
 
 
 
-\\LIVRE is a book reading and selling website people can read all types of books for free here and it contains relaxing music related to the emotion.and you can get suggesed by the people and give suggestion to everyone about your favourite books and you can explore real book library rack in this website to get a real experience of a library.
+\\LIVRE is a book reading and maintaining read books history On this website people can read all types of books for free and you can explore real book library racks in this website to get a real experience of a library and the user can request books which will be responded by admin like accepted and declined.
 
 
 
